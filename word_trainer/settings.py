@@ -154,6 +154,15 @@ if 'HEROKU_PRODUCTION_ENVIRONMENT_TRUE' in os.environ:
     STATIC_ROOT = 'staticfiles'
     STATIC_URL = '/static/'
 
+    '''
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
     )
+    '''
+    
+    # Extra places for collectstatic to find static files.
+    STATICFILES_DIRS = (
+        os.path.join(PROJECT_ROOT, 'trainer/static'),
+    )
+
+    STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
