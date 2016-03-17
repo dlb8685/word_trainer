@@ -141,7 +141,7 @@ if 'HEROKU_PRODUCTION_ENVIRONMENT_TRUE' in os.environ:
     db_from_env = dj_database_url.config(conn_max_age=500)
     DATABASES['default'].update(db_from_env)
     
-    DEBUG = False
+    DEBUG = True #False
     TEMPLATES[0]['OPTIONS']['debug'] = False  # Django 1.8
     
     SECRET_KEY = os.environ['SECRET_KEY']
