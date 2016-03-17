@@ -1,0 +1,21 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<h1>Q-Without-U Words</h1>
+
+<p>Below is a full list of words with a Q that do not have a U.</p>
+
+<p>Pulling a high-value letter like Q can be a <a href="">mixed blessing</a>. On the one hand, it is a high scoring letter in many word games. On the other hand, the vast majority of Q words also include a U.</p>
+
+<p>Towards the end of a game, every U might already have been played. If you are caught in this situation, it is absolutely essential to know which words can use a Q without a U.</p>
+
+<p>Fortunately, <strong>The Word Trainer</strong> has a number of learning <a href="">tools</a> to facilitate this process.</p>
+
+{% for word_match in word_matches %}
+<h3>{{ word_match.letter_count }} Letters</h3>
+    {% for word in word_match.words %}
+<a href="http://www.merriam-webster.com/dictionary/{{ word.lower }}">{{ word }}</a> {% if not forloop.last %}-{% endif %} 
+    {% endfor %}
+{% endfor %}
+
+{% endblock %}

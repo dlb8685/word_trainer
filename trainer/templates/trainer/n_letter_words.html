@@ -1,0 +1,44 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row text-center"><h1>{{ n }}-Letter Words</h1></div>
+
+<div class="row padding-05em">
+<p>Below is a full list of words with {{ n }} letters. Click on any word to view a definition.</p>
+
+<p>It is essential to become <a href="{% url 'trainer_article_2_3_letter_words' %}">well-versed</a> on 2, 3, and even 4-letter words to become a top player at most word games.</p>
+
+<p>Fortunately, <strong>The Word Trainer</strong> has a number of learning <a href="{% url 'trainer_tools_home' %}">tools</a> to facilitate this process.</p>
+
+<ul class="list-unstyled text-center">
+<li><a href="{% url 'trainer_n_letter_words' 2 %}">2-Letter Words</a></li>
+<li><a href="{% url 'trainer_n_letter_words' 3 %}">3-Letter Words</a></li>
+<li><a href="{% url 'trainer_n_letter_words' 4 %}">4-Letter Words</a></li>
+<li><a href="{% url 'trainer_n_letter_words' 5 %}">5-Letter Words</a></li>
+<li><a href="{% url 'trainer_n_letter_words' 6 %}">6-Letter Words</a></li>
+<li><a href="{% url 'trainer_n_letter_words' 7 %}">7-Letter Words</a></li>
+</div>
+
+<div class="row text-center">{% if n <= 3 %}<h2>By First Letter</h2>{% else %}<h2>By First Letters</h2>{% endif %}</div>
+
+<div class="row padding-05em">
+{% for word_match in word_matches %}
+<h3>{{ word_match.stem }}</h3>
+    {% for word in word_match.words %}
+    <a href="http://www.merriam-webster.com/dictionary/{{ word.lower }}">{{ word }}</a> {% if not forloop.last %}-{% endif %} 
+    {% endfor %}
+{% endfor %}
+</div>
+
+<div class="row text-center">{% if n <= 3 %}<h2>By Last Letter</h2>{% else %}<h2>By Last Letters</h2>{% endif %}</div>
+
+<div class="row padding-05em">
+{% for word_match in word_matches_end %}
+<h3>{{ word_match.stem }}</h3>
+    {% for word in word_match.words %}
+    <a href="http://www.merriam-webster.com/dictionary/{{ word.lower }}">{{ word }}</a> {% if not forloop.last %}-{% endif %} 
+    {% endfor %}
+{% endfor %}
+</div>
+
+{% endblock %}

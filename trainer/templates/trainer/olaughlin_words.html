@@ -1,0 +1,19 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row text-center"><h1>O'Laughlin Words</h1></div>
+
+<div class="row padding-05em">
+<p>This page contains a list of words with high O'Laughlin playability. You can read more about that metric here. In short, it measures how important it is to know a certain word, given the likelihood of drawing the tiles to make that word, its point value, and the lack of other words to make with the same letters.</p>
+
+<p>It is very important to know the words on this list and memorize them. Fortunately, <strong>The Word Trainer</strong> has a number of learning <a href="">tools</a> to facilitate this process.</p>
+
+{% for result in word_matches %}
+<h3>{{ result.letter_count }} Letters</h3>
+    {% for word in result.words %}
+    <a href="http://www.merriam-webster.com/dictionary/{{ word.lower }}">{{ word }}</a> {% if not forloop.last %}-{% endif %}
+    {% endfor %}
+{% endfor %}
+</div>
+
+{% endblock %}

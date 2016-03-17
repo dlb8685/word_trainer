@@ -1,0 +1,64 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row text-center"><h1>Strategy and Tips -- Drawing for 7-Letter Words</h1></div>
+
+<div class="row padding-05em">
+<p>One of the best way to rack up large scores in Words With Friends&reg; is to play 7-letter words. These give a 35-point bonus and frequently hit premium squares along the way.</p>
+
+<p>Obviously, part of playing these words consists of finding them on your rack. But, except for the first turn, getting good letters to make a 7-letter word doesn't just happen by accident. You might get lucky once in awhile, but you can take proactive steps to increase your odds of having good letters.</p>
+
+<p>After the first turn, you frequently are choosing between several options when making a word. If there is no significant difference in the points you will score, then you need to consider other criteria. Different words will leave different letters on your rack. It is important to know which sets of letters are most likely to lead to your drawing good words on a subsequent turn. In this guide, we will refer to the letters you leave behind as "stems".</p>
+
+<p>For instance, if you were to be drawing one letter, with the stem <strong>AEINST</strong> on your rack, you would be overwhelmingly likely to draw a letter which gave you a 7-letter word. In fact, every letter except J, Q, and Y can combine with <strong>AEINST</strong> to make a 7-letter word (think <strong>AUNTIES</strong>, <strong>BASINET</strong>, <strong>STAINER</strong>, etc.). This is an extreme example, but it shows that certain sets of letters are much more valuable to leave on your rack than others.</p>
+
+<p>By learning some of the best 3-letter, 4-letter, 5-letter, and 6-letter stems to leave behind, you can help yourself out in the middle of a game. When is it not possible to play a long word in a particular move, you can still maximize your future value by wisely selecting the letters you leave behind.</p>
+
+<p>We delve into this in more detail with some of the links above, but here is a short list of the best stems to leave on your rack for each number of letters (between 3-6).</p>
+
+<h4><a href="{% url 'trainer_n_letter_word_stems' 3 %}">3 Letters</a></h4>
+<p>ERS, EIS, AES, AER, EIR, EST, ELS, GIN, EOS, AEL</p>
+
+<h4><a href="{% url 'trainer_n_letter_word_stems' 4 %}">4 Letters</a></h4>
+<p>AERS, EIRS, EIST, EORS, EINS, ERST, AELS, AEST, EERS, EILS</p>
+
+<h4><a href="{% url 'trainer_n_letter_word_stems' 5 %}">5 Letters</a></h4>
+<p>AERST, EIRST, AELRS, EERST, EORST, EINST, ADERS, EINRS, AELST, AGILN</p>
+
+<h4><a href="{% url 'trainer_n_letter_word_stems' 6 %}">6 Letters</a></h4>
+<p>AEINST, AEERST, EGINRS, AEILNS, AELSST, AGILNS, EELRST, ACEHRS, ACELRS, ADERST</p>
+
+<p>For everyday play, the most relevant of these are probably the 3 and 4-letter stems. If you know that AERS, EST, or EILS are good letter combinations to leave in your rack, and can keep that in mind during a game, then you will help your chances of drawing 7-letter words and making monster scores.</p>
+
+
+<h3>Exchanging Your Letters</h3>
+<p>If you have an unplayable assortment of letters, and you can't really make a word for more than 10-20 points, you might consider exchanging your letters. You also might check the Tile Bag to see what you are likely to draw. If you have an ER or a ST, you might consider hanging on to those and just drawing 5 letters.</p>
+
+<p>If you somehow have a weird combination like AEINSTZ, either look for someplace to play only the Z, or exchange only the Z. You're extremely likely to get a 7-letter word in return. This situation, of course, is not all that common. But you can recognize it when it does occur, you could really be helping yourself.</p>
+
+
+<h3>Conclusion</h3>
+<p>Continue to our next section to read about the high-value, uncommon letters of <a href="{% url 'trainer_article_jqxz' %}">J, Q, X, and Z</a>. Or click on any of our articles below.</p>
+
+<ul class="list-unstyled text-center">
+<li><a href="{% url 'trainer_article_overview' %}">Overview</a></li>
+<li><a href="{% url 'trainer_article_opening' %}">The Opening</a></li>
+<li><a href="{% url 'trainer_article_space_and_position' %}">Space and Position</a></li>
+<li><a href="{% url 'trainer_article_2_3_letter_words' %}">The Importance of 2 and 3 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_olaughlin_words' %}">Other Important Words, a Metric</a></li>
+<li><a href="{% url 'trainer_article_finding_words' %}">Finding Words -- Common Letter Groups</a></li>
+<li><a href="{% url 'trainer_article_drawing_7_letter_words' %}">Drawing for 7 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_jqxz' %}">Playing J, Q, X, and Z</a></li>
+<li><a href="{% url 'trainer_article_prefixes_suffixes' %}">Prefixes and Suffixes</a></li>
+<li><a href="{% url 'trainer_article_consonant_vowel_distribution' %}">Consonant and Vowel Distribution</a></li>
+<li><a href="{% url 'trainer_article_endgame' %}">The Endgame</a></li>
+<li><a href="{% url 'trainer_article_sample_game_1' %}">Sample Game 1</a></li>
+<li><a href="{% url 'trainer_article_sample_game_2' %}">Sample Game 2</a></li>
+<li><a href="{% url 'trainer_article_sample_game_3' %}">Sample Game 3</a></li>
+<li><a href="{% url 'trainer_article_sample_game_4' %}">Sample Game 4</a></li>
+<li><a href="{% url 'trainer_article_sample_game_5' %}">Sample Game 5</a></li>
+</ul>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row text-center"><h1>Word Lookup Tool</h1></div>
+
+<div class="row padding-05em"><h3>Search</h3></div>
+<div class="row padding-05em">
+<form action="{% url 'trainer_get_matching_words' %}" method="get">
+{{ search_input_form }}
+<input type="submit" value="Get Words!" />
+</form>
+</div>
+
+<div class="row padding-05em">
+</br><p>A lookup tool. A cheat tool. A word-finder. A "helper". Whatever you want to call it, we have it here. Enter your letters and view every possible word. This tool uses our best-effort version of the Words With Friends&reg; dictionary to find every matching word for the letters that you enter.</p>
+<p>Also check out our <a href="{% url 'trainer_get_prefix_suffix_list' %}">Prefix-Suffix Finder</a> and <a href="{% url 'trainer_tools_home' %}">Learning Tools</a>.</p>
+</div>
+
+{% if search_input %}
+<div class="row text-center"><h3>You searched for: {{ search_input }}</h3></div>
+<div class="row padding-05em">
+{% for word_match in word_matches %}
+<h3>{{ word_match.letter_count }} Letters</h3>
+    {% for word in word_match.words %}
+    <a href="http://www.merriam-webster.com/dictionary/{{ word.lower }}">{{ word }}</a> {% if not forloop.last %}-{% endif %}
+    {% endfor %}
+{% endfor %}
+</div>
+{% endif %}
+
+{% endblock %}

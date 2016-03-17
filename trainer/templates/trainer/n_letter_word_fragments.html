@@ -1,0 +1,26 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row text-center"><h1>{{ n }}-Letter Word Fragments</h1></div>
+
+<div class="row padding-05em">
+<p>The word fragments below are sets of {{ n }} letters which are part of many other words.</p>
+
+<p>For instance, the {{ n }}-letter groups found in the most words are {{ word_fragments.0.word_fragment }}, followed by {{ word_fragments.1.word_fragment }} and {{ word_fragments.2.word_fragment }}.</p>
+
+<p>When looking for words on a rack of letters, organizing sets of them into these fragments can help to <a href="{% url 'trainer_article_finding_words' %}">uncover</a> high-scoring words in many word games.</p>
+
+<p>Fortunately, <strong>The Word Trainer</strong> has a number of learning <a href="{% url 'trainer_tools_home' %}">tools</a> to facilitate this process.</p>
+</div>
+
+<div class="row padding-05em">
+{% for word_fragment in word_fragments %}
+<h3>{{ word_fragment.word_fragment }}</h3>
+{{ word_fragment.word_count }} words: 
+    {% for word in word_fragment.words %}
+    <a href="http://www.merriam-webster.com/dictionary/{{ word.word.lower }}">{{ word.word }}</a> {% if not forloop.last %}-{% elif word_fragment.word_count > 10 %}...{% endif %} 
+    {% endfor %}
+{% endfor %}
+</div>
+
+{% endblock %}

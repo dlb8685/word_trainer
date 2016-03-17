@@ -1,0 +1,63 @@
+{% extends 'trainer/base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+<div class="row text-center"><h1>Strategy and Tips -- Prefixes and Suffixes</h1></div>
+
+<div class="row padding-05em">
+<p>Often, your best scores at Words With Friends&reg; will come from playing multiple words at the same time. One way to do this is to become well-versed on 2/3-letter words, to exploit opportunities to play words in parallel. Another way is to play a one-letter prefix or suffix to a longer word already on the board, and use that letter as part of a second word. If you do this in the right place, you can add 20 points to <em>your</em> score before you lay your second tile down.</p>
+
+<h3>Blanks and S Tiles</h3>
+<p>The most obvious letter to do this with is S. In fact, the S tiles are so valuable that you should basically always play them at the end of other words. If you made a word like SISTER, and neither of the two S tiles were suffixing other words, you could be wasting 50 points of value that would get from playing those S tiles more judiciously.</p>
+
+<p>Blank tiles are also extremely important in this sense -- even more so than the S -- because a blank can obviously be used for any letter in the alphabet, and can therefore prefix or suffix an enormous number of words.</p>
+
+<p>Given these points about S and blank tiles, I would say that you should never be playing them unless they prefix-suffix an existing word, help you play all seven tiles for a bonus, or otherwise add at least 20 points to a word you are making. You should never use a blank or S as part of a 15-20 point word, when there is probably a substitute word of similar value. Doing so is a huge mistake that will cost a lot of future value.</p>
+
+<h3>Most Common Prefix-Suffix Letters</h3>
+<p>Finding opportunities for prefixes and suffixes is more of an art than a science. Even a letter like W, not usually associated with this area of the game at all, can become highly valuable as a prefix in the right situation. That being said, here are a few letters that you should particularly focus on if you see them in your rack. By using them to prefix or suffix a word, you can greatly help your scoring. We also have a lookup <a href="{% url 'trainer_get_prefix_suffix_list' %}">tool</a> where a specific word can be entered.</p>
+
+<div class="text-center">
+<h4>Prefixes</h4>
+<p>S, P, C, T, B</p>
+
+<h4>Suffixes</h4>
+<p>S, D, R, Y, E</p>
+</div>
+
+<h3>Prefixes-Suffixes and Board Strategy</h3>
+<p>You should also be aware of <em>potential</em> prefixes and suffixes when analyzing the shape of the board. Knowing if a word can be extended can tell you if a certain part of the board is "live" or not.</p>
+
+<div class="text-center margin-05em"><img class="img-article" src="{% static 'trainer/images/position-example-prefixes.png' %}" /></div>
+
+<p>In this example, focus on COIF and PUSES. In the left-most column, the area above COIF is not "live", in the sense that no player can play a word into that area on their next turn. This is because there is no letter in the alphabet that makes a one-letter prefix to COIF.</p>
+
+<p>However, anybody with an O can play it before PUSES to make OPUSES. They can then extend a word to the TW and TL squares nearby, and probably score a lot of points on their turn. They could also do the same with a blank. Thus, this part of the board should be considered "live", and either player can make a big score there if they have the right letter on their rack.</p>
+
+<p>If you had a big lead, you might think twice before playing PUSES towards the edge of the board like this. Conversely, if you were behind, you might play PUSES on one turn, and then hope you could follow with an O-word on your next turn. It is a risky play, but it might be your only chance to catch up. If you were winning, and your opponent played PUSES, and you didn't have an O, you might still look for ways to muddle the first column of the board, to make it harder to build a long word.</p>
+
+<h3>Conclusion</h3>
+<p>A good player will always be thinking about the prefixes and suffixes that are available on the board, how to set themselves up with them for future turns, and whether it is in their best interest to try and do so.</p>
+
+<p>Continue on to read about <a href="{% url 'trainer_article_consonant_vowel_distribution' %}">consonant and vowel</a> distribution, or read any article from the list below.</p>
+
+<ul class="list-unstyled text-center">
+<li><a href="{% url 'trainer_article_overview' %}">Overview</a></li>
+<li><a href="{% url 'trainer_article_opening' %}">The Opening</a></li>
+<li><a href="{% url 'trainer_article_space_and_position' %}">Space and Position</a></li>
+<li><a href="{% url 'trainer_article_2_3_letter_words' %}">The Importance of 2 and 3 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_olaughlin_words' %}">Other Important Words, a Metric</a></li>
+<li><a href="{% url 'trainer_article_finding_words' %}">Finding Words -- Common Letter Groups</a></li>
+<li><a href="{% url 'trainer_article_drawing_7_letter_words' %}">Drawing for 7 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_jqxz' %}">Playing J, Q, X, and Z</a></li>
+<li><a href="{% url 'trainer_article_prefixes_suffixes' %}">Prefixes and Suffixes</a></li>
+<li><a href="{% url 'trainer_article_consonant_vowel_distribution' %}">Consonant and Vowel Distribution</a></li>
+<li><a href="{% url 'trainer_article_endgame' %}">The Endgame</a></li>
+<li><a href="{% url 'trainer_article_sample_game_1' %}">Sample Game 1</a></li>
+<li><a href="{% url 'trainer_article_sample_game_2' %}">Sample Game 2</a></li>
+<li><a href="{% url 'trainer_article_sample_game_3' %}">Sample Game 3</a></li>
+<li><a href="{% url 'trainer_article_sample_game_4' %}">Sample Game 4</a></li>
+<li><a href="{% url 'trainer_article_sample_game_5' %}">Sample Game 5</a></li>
+</ul>
+
+{% endblock %}

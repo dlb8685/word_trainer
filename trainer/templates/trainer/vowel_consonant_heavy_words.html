@@ -1,0 +1,33 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+{% if display_type = 'vowel' %}
+<h1>Vowel-Heavy Words</h1>
+{% else %}
+<h1>Consonant-Heavy Words</h1>
+{% endif %}
+
+<p>One difficult position in many word games is that of finding one's self with a rack of nearly all vowels, or all consonants.</p>
+
+<p>There are a couple of ways to handle <a href="">this situation</a>.</p>
+
+<p>One is to simply forfeit the turn and exchange one's tiles.</p>
+
+<p>However, by learning some words which are very heavy in vowels or consonants, there are many cases where a 5, 6, or even 7 letter word could be sitting on the board.</p>
+
+<p>Fortunately, <strong>The Word Trainer</strong> has a number of learning <a href="">tools</a> to facilitate this process.</p>
+
+{% if display_type = 'vowel' %}
+<p>Below are some words, consisting mostly of vowels, that may come in handy.</p>
+{% else %}
+<p>Below are some words, consisting mostly of consonants, that may come in handy.</p>
+{% endif %}
+
+{% for result in word_vowel_consonant_heavy %}
+<h3>{{ result.letter_count }} Letters</h3>
+    {% for word in result.words %}
+    <a href="http://www.merriam-webster.com/dictionary/{{ word.lower }}">{{ word }}</a> {% if not forloop.last %}-{% endif %}
+    {% endfor %}
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row text-center"><h1>Strategy and Tips -- Overview</h1></div>
+
+<div class="row padding-05em">
+<p>Words With Friends&reg; is a tile-placing, word-building strategy game, similar to Scrabble&reg;. The object of the game is to outscore your opponent before the 104 available tiles are played.</p>
+
+<p>Broadly speaking, there are two important areas to focus on to become a strong player.</p>
+
+<ol>
+<li>Vocabulary</li>
+<li>Position and Premium Squares</li>
+</ol>
+
+<h3>Vocabulary</h3>
+<p>A strong vocabulary in a literary sense, or an everyday sense, is not directly transferable to success at Words With Friends. Many of the most useful words are <a href="{% url 'trainer_article_2_3_letter_words' %}">two and three-letter words</a> of obscure origin which are rarely used in conversation. Two-letter words are infinitely more useful than two-dollar words if one's goal is to win at Words With Friends. Short words should be memorized to the greatest extent possible.</p>
+
+<p>Additionally, there are ways to increase one's chances of getting the letters to make strong words. Knowing about <a href="{% url 'trainer_article_consonant_vowel_distribution' %}">consonant-vowel distributions</a>, and knowing the letters most often found in <a href="{% url 'trainer_article_drawing_7_letter_words' %}">7-letter words</a>, can help you maximize your chances of drawing for a bonus.</p>
+
+<p>Of course, there are other areas to focus on. Learning words which utilize <a href="{% url 'trainer_article_jqxz' %}">high-value letters</a> like J, Q, X, and Z is important. Knowing <a href="{% url 'trainer_article_prefixes_suffixes' %}">prefixes and suffixes</a> will help immensely when trying to find a legal play for a high-value word on your rack. All of these areas are covered in the process of building a vocabulary.</p>
+
+<h3>Position and Premium Squares</h3>
+<p>The other broad aspect of play is <a href="{% url 'trainer_article_space_and_position' %}">position</a> and spatial understanding. The premium word and letter squares are spaced in such a manner as to impose themselves on the game. It is possible to rack up huge scores in a turn by combining two double-word (DW) squares into a 4X score, or by putting a 10-point letter like Z on a triple-letter (TL) square, and then playing that word into a triple-word (TW) score.</p>
+
+<p>In a given turn, a player can play a longer word into open space, which will open up the board for future turns. Or that player can play a shorter word, adjacent to existing words, or covering premium-word squares. One might play a mediocre word if it blocks a TW square, just to preempt their opponent from racking up a huge score.</p>
+
+<p>In short, there are offensive and defensive ways to play a turn, and deciding on which one to pursue is dependent upon one's own abilities, their opponent, and the game situation. There are some quirks specific to the <a href="{% url 'trainer_article_opening' %}">opening</a> and <a href="{% url 'trainer_article_endgame' %}">endgame</a>. As in many other games of strategy, the player in the lead will often wish to reduce the volatility of a game.</p>
+
+<h3>Conclusion</h3>
+<p>This is only a basic overview of Words With Friends. Continue to our next section, which covers the <a href="{% url 'trainer_article_opening' %}">opening moves</a> of the game.</p>
+
+<ul class="list-unstyled text-center">
+<li><a href="{% url 'trainer_article_overview' %}">Overview</a></li>
+<li><a href="{% url 'trainer_article_opening' %}">The Opening</a></li>
+<li><a href="{% url 'trainer_article_space_and_position' %}">Space and Position</a></li>
+<li><a href="{% url 'trainer_article_2_3_letter_words' %}">The Importance of 2 and 3 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_olaughlin_words' %}">Other Important Words, a Metric</a></li>
+<li><a href="{% url 'trainer_article_finding_words' %}">Finding Words -- Common Letter Groups</a></li>
+<li><a href="{% url 'trainer_article_drawing_7_letter_words' %}">Drawing for 7 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_jqxz' %}">Playing J, Q, X, and Z</a></li>
+<li><a href="{% url 'trainer_article_prefixes_suffixes' %}">Prefixes and Suffixes</a></li>
+<li><a href="{% url 'trainer_article_consonant_vowel_distribution' %}">Consonant and Vowel Distribution</a></li>
+<li><a href="{% url 'trainer_article_endgame' %}">The Endgame</a></li>
+<li><a href="{% url 'trainer_article_sample_game_1' %}">Sample Game 1</a></li>
+<li><a href="{% url 'trainer_article_sample_game_2' %}">Sample Game 2</a></li>
+<li><a href="{% url 'trainer_article_sample_game_3' %}">Sample Game 3</a></li>
+<li><a href="{% url 'trainer_article_sample_game_4' %}">Sample Game 4</a></li>
+<li><a href="{% url 'trainer_article_sample_game_5' %}">Sample Game 5</a></li>
+</ul>
+
+
+</div>
+
+{% endblock %}

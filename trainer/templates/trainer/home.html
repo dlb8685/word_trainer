@@ -1,0 +1,87 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+
+
+
+<div class="row text-center border-bottom">
+<h3>Lookup Tool</h3>
+<form action="{% url 'trainer_get_matching_words' %}" method="get">
+{{ search_input_form }}
+<input type="submit" value="Get Words!" />
+</form>
+
+</br><p>Make a quick search to see what word you might play, or improve your game by working through our articles and exercises.</p>
+</div>
+
+<div class="row padding-05em">
+<p class="lead text-center"><strong>Welcome to the Word Trainer!</strong></p>
+
+<p>We're here to help you become a stronger player at games like Words With Friends&reg; and Scrabble&reg;. We have search tools, learning tools, articles, and word lists to help you along the way. We also have links to numerous external resources, many of them free, which can provide further help.</p>
+</div>
+
+<div class="row">
+
+<div class="col-sm-6">
+<h3>Help/Cheat Tools</h3>
+<ul>
+<li><a href="{% url 'trainer_tools_find_all_words' %}">Find All Words (from a set of 3-7 Letters)</a></li>
+<li><a href="{% url 'trainer_get_prefix_suffix_list' %}">Prefix and Suffix Lookup</a></li>
+</ul>
+</div>
+
+<div class="col-sm-6">
+<h3>Learning Tools</h3>
+<ul>
+<li><a href="{% url 'trainer_tools_is_this_a_word' %}">Is This a Word? (you guess Yes/No)</a></li>
+<li><a href="{% url 'trainer_tools_words_by_length_and_stem' %}">Words by Length and Stem</a></li>
+<li><a href="{% url 'trainer_tools_7_letter_words_by_stem' %}">7-Letter Words by Stem</a></li>
+<li><a href="{% url 'trainer_tools_vowel_heavy_words' %}">Vowel-Heavy Words</a></li>
+<li><a href="{% url 'trainer_tools_2_letter_words' %}">Two-Letter Words</a></li>
+<li><a href="{% url 'trainer_tools_olaughlin_words' %}">O'Laughlin Words</a></li>
+</ul>
+</div>
+
+<div class="col-sm-6">
+<h3>Strategy and Tips</h3>
+<ul>
+<li><a href="{% url 'trainer_article_overview' %}">Overview</a></li>
+<li><a href="{% url 'trainer_article_opening' %}">The Opening</a></li>
+<li><a href="{% url 'trainer_article_space_and_position' %}">Space and Position</a></li>
+<li><a href="{% url 'trainer_article_2_3_letter_words' %}">The Importance of 2 and 3 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_olaughlin_words' %}">Other Important Words, a Metric</a></li>
+<li><a href="{% url 'trainer_article_finding_words' %}">Finding Words -- Common Letter Groups</a></li>
+<li><a href="{% url 'trainer_article_drawing_7_letter_words' %}">Drawing for 7 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_jqxz' %}">Playing J, Q, X, and Z</a></li>
+<li><a href="{% url 'trainer_article_prefixes_suffixes' %}">Prefixes and Suffixes</a></li>
+<li><a href="{% url 'trainer_article_consonant_vowel_distribution' %}">Consonant and Vowel Distribution</a></li>
+<li><a href="{% url 'trainer_article_endgame' %}">The Endgame</a></li>
+<li><a href="{% url 'trainer_article_sample_game_1' %}">Sample Game 1</a></li>
+<li><a href="{% url 'trainer_article_sample_game_2' %}">Sample Game 2</a></li>
+<li><a href="{% url 'trainer_article_sample_game_3' %}">Sample Game 3</a></li>
+<li><a href="{% url 'trainer_article_sample_game_4' %}">Sample Game 4</a></li>
+<li><a href="{% url 'trainer_article_sample_game_5' %}">Sample Game 5</a></li>
+</ul>
+</div>
+
+<div class="col-sm-6">
+<h3>Word Lists</h3>
+<ul>
+<li><a href="{% url 'trainer_n_letter_words' 2 %}">Two Letter Words</a></li>
+<li><a href="{% url 'trainer_n_letter_words' 3 %}">Three Letter Words</a></li>
+<li><a href="{% url 'trainer_n_letter_words' 4 %}">Four Letter Words</a></li>
+<li><a href="{% url 'trainer_n_letter_word_fragments' 3 %}">Three Letter Fragments</a></li>
+<li><a href="{% url 'trainer_n_letter_word_stems' 3 %}">Three Letter Word Stems</a></li>
+<li><a href="{% url 'trainer_n_letter_word_stems' 4 %}">Four Letter Word Stems</a></li>
+<li><a href="{% url 'trainer_n_letter_word_stems' 5 %}">Five Letter Word Stems</a></li>
+<li><a href="{% url 'trainer_n_letter_word_stems' 6 %}">Six Letter Word Stems</a></li>
+<li><a href="{% url 'trainer_olaughlin_words' %}">O'Laughlin Words</a></li>
+<li><a href="{% url 'trainer_jqxz_words' %}">JQXZ Words</a></li>
+<li><a href="{% url 'trainer_q_without_u_words' %}">Q-without-U Words</a></li>
+<li><a href="{% url 'trainer_consonant_heavy_words' %}">Consonant-Heavy Words</a></li>
+<li><a href="{% url 'trainer_vowel_heavy_words' %}">Vowel-Heavy Words</a></li>
+</ul>
+</div>
+
+</div>
+{% endblock %}

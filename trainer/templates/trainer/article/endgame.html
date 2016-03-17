@@ -1,0 +1,53 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row text-center"><h1>Strategy and Tips -- The Endgame</h1></div>
+
+<div class="row padding-05em">
+<p>Once the game passes a certain point, it is unlikely that you will be able to make 7-letter words, and the game and board situation become your overriding concerns. During the first part of the game, your best move will probably be the same whether you are ahead, behind, or tied. As the endgame approaches, though, you might do very different things depending on whether you have the lead or not.</p>
+
+<h3>General Principles of the Endgame</h3>
+<p>The two players will have competing objectives as the end nears. The player in the lead, generally speaking, will want to reduce the volatility of the board and game. The player who is trailing will want to increase it. What does this mean, and what are some examples?</p>
+
+<p>A game that is volatile is one with many letters remaining, many premium squares still uncovered, and a wide open shape that allows for several long words to be played. If one of the players is trailing by more than 20-30 points, they will likely need to get at least a couple of very good/long words down on the board. If there are 25 letters left to draw, the losing player has a decent chance to play a couple of such words. If the Tile Bag is empty and the losing player has five letters on their rack, then they are definitely in trouble.</p>
+
+<p>If the board has many of the TL and TW squares still open, then it will also be easier for the losing player to make a 50-100 point word that can propel them ahead. It is in the winning player's interest to either avoid these squares, or to play whatever word they can on them, even if it makes a mediocre score. The benefit from these plays comes in denying opportunity to the opponent.</p>
+
+<p>As for the lay of the board, the player who is behind should not hesitate to take chances in pushing the action to a new area, by playing a long word into open space. Often, these kinds of plays can backfire on the player who takes the risk. However, a player who is trailing doesn't have the luxury of playing conservatively. They have to hope that if there are a couple turns of long words and premium scores, that they will come out 30-40 points ahead in the volatility and close the game a little bit.</p>
+
+<p>On the other hand, a player who is ahead does not want the game to open up. They should be looking for ways to play words adjacent to other words, to start a word with C or V to make it hard to build off of, and to play words without prefixes or suffixes to reduce the scope of their opponent's play. They want to make their losing opponent be the first one to play into a new area, so that they can then reply with a word that occupies the most important premium squares.</p>
+
+<p>Regardless of whether a player is winning or losing, they want to be careful to not get caught with a rack full of letters as the game ends. Every point left on a player's rack counts doubly against them in the final score. First they lose the points, and then their opponent gains them.</p>
+
+<h3>When the Tile Bag is Empty</h3>
+<p>One thing to avoid doing, if possible, is to play a word that forces you to draw the last letters out of the Tile Bag, when doing so will put 6-7 letters in your rack. If your opponent has a 7-letter word laid out, you could end up giving them 15-20 points from your score, which is a huge swing. It is much better to have seven letters on your rack, and another 1-2 letters in the Tile Bag. Then, if your opponent lays down a great word, you will at least have a final turn to get rid of your highest scoring letters. This is particularly important to keep in mind if you are winning, and can afford to sacrifice 5-10 points by playing a smaller word if it keeps you out of this dangerous situation. If you are losing, you might just need to take as many points as you can, and hope for the best.</p>
+
+<p>It is always helpful in the endgame to know your <a href="{% url 'trainer_article_2_3_letter_words'%}">two and three-letter</a> words, and particular those that use esoteric letters like <a href="{% url 'trainer_article_jqxz' %}">J, Q, X, and Z</a>.
+
+<h3>Conclusion</h3>
+<p>Hopefully, if you've played a good game, you'll be rewarded with a victory. This short section on the endgame concludes our collection of strategy articles on winning at Words With Friends&reg;.</p>
+
+<p>If you'd like to see some real-world examples, I played a best of 7 series against the Words With Friends&reg; AI bot and recorded every move, along with an explanation of my reasoning and any mistakes that the bot or I made. I won't spoil this by saying who won the series, but feel free to start with <a href="{% url 'trainer_article_sample_game_1' %}">Game 1</a> and see what you think.</p>
+
+<ul class="list-unstyled text-center">
+<li><a href="{% url 'trainer_article_overview' %}">Overview</a></li>
+<li><a href="{% url 'trainer_article_opening' %}">The Opening</a></li>
+<li><a href="{% url 'trainer_article_space_and_position' %}">Space and Position</a></li>
+<li><a href="{% url 'trainer_article_2_3_letter_words' %}">The Importance of 2 and 3 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_olaughlin_words' %}">Other Important Words, a Metric</a></li>
+<li><a href="{% url 'trainer_article_finding_words' %}">Finding Words -- Common Letter Groups</a></li>
+<li><a href="{% url 'trainer_article_drawing_7_letter_words' %}">Drawing for 7 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_jqxz' %}">Playing J, Q, X, and Z</a></li>
+<li><a href="{% url 'trainer_article_prefixes_suffixes' %}">Prefixes and Suffixes</a></li>
+<li><a href="{% url 'trainer_article_consonant_vowel_distribution' %}">Consonant and Vowel Distribution</a></li>
+<li><a href="{% url 'trainer_article_endgame' %}">The Endgame</a></li>
+<li><a href="{% url 'trainer_article_sample_game_1' %}">Sample Game 1</a></li>
+<li><a href="{% url 'trainer_article_sample_game_2' %}">Sample Game 2</a></li>
+<li><a href="{% url 'trainer_article_sample_game_3' %}">Sample Game 3</a></li>
+<li><a href="{% url 'trainer_article_sample_game_4' %}">Sample Game 4</a></li>
+<li><a href="{% url 'trainer_article_sample_game_5' %}">Sample Game 5</a></li>
+</ul>
+
+</div>
+
+{% endblock %}

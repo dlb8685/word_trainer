@@ -1,0 +1,74 @@
+{% extends 'trainer/base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+<div class="row text-center"><h1>Strategy and Tips -- Space and Position</h1></div>
+
+<div class="row padding-05em">
+<p>Without the benefits of the premium tiles and the 7-letter bonus, the vast majority of words in Words With Friends, even long ones, would be worth 15 points or less. Yet, many players can average 30 points a move or more. This is because they effectively utilize premium tiles, and the letters which have already been played on the board.</p>
+
+<h3>Playing with the Letters on the Board</h3>
+<p>In reference to the letters on the board, it is often better to play adjacent to them, rather than perpendicular. This is especially true if you lack an obvious long and high-scoring word. For instance, suppose you are planning to play the word <strong>FETAL</strong>, and the word <strong>EATEN</strong> is already on the board. Your best option is probably to play the F above the A in eaten, and also make the words <strong>FA</strong>, <strong>ET</strong>, <strong>TE</strong>, and <strong>AN</strong>. In this way, the letters <strong>FETA</strong> in your word will count for double.</p>
+
+<p>Furthermore, if you can combine this with hitting a premium square, the point value of your rather ordinary word can get pretty significant. For instance, let's say you put the F on a TL square. The F tile will be with 12 points in <strong>FE</strong>, and another 12 points in <strong>FETAL</strong>. Just from one letter, you have already scored a full 24 points! When you add up your entire score for the turn, it comes out to 37 points. 
+
+<p>Contrast that example to playing <strong>FETAL</strong> using only the T in <strong>EATEN</strong>. In this case you would score 9 points. You've played the same word, but the difference in scoring is huge. 28 points can easily make the difference in winning or losing an entire game.</p>
+
+<p>Another benefit of playing <strong>FETAL</strong> adjacent to <strong>EATEN</strong> is that it reduces the counter-play that your opponent enjoys. They now have far fewer ways to play all 7 tiles, and/or rack up a huge score, than they would if you left 3-4 different letters jutting out into open space. Any long word they try to make must now specifically include the combinations <strong>FE</strong>, <strong>ET</strong>, <strong>TE</strong>, or <strong>AN</strong>. It is always a bit of a numbers game, but this greatly tilts the odds in your favor.</p>
+
+<div class="text-center margin-05em"><img class="img-article" src="{% static 'trainer/images/position-example-parallel-word.png' %}" /></div>
+
+<p>Using the words on the board can be useful at any point in the game. In this example, a player has scored 35 points using the 1-point letters E, A, and T. Their method was to play them in parallel to an existing word, while hitting a premium square. Had they played <strong>NEAT</strong> with the N in <strong>TOLANES</strong>, their score would have been only 6 points.</p>
+
+
+<h3>Dangerous Areas</h3>
+<p>The TW squares are all on the edge of the board. Many of the other premium squares are also away from the center of the board. This means that as the game progresses, one player or the other must "activate" certain regions of the board by playing into them. This is unavoidable to a certain extent, but you should be careful about playing into certain regions of the board without receiving a pretty decent score in return.</p>
+
+<div class="text-center margin-05em"><img class="img-article" src="{% static 'trainer/images/danger-zones-1.png' %}" /> <img class="img-article" src="{% static 'trainer/images/danger-zones-2.png' %}" /></div>
+
+<p>There are areas of the board that I like to think of as "tripwires". Words With Friends&reg; makes it easy to combine multiple premium squares with one word, and the resulting scores can easily be enormous. If one player carelessly plays into the area between a TW and TL square, their opponent can easily score over 100 points on the next move if they have a JQXZ letter and can hit the TL square cleanly.</p>
+
+<div class="text-center margin-05em"><img class="img-article" src="{% static 'trainer/images/position-example-tripwire-1.png' %}" /> <img class="img-article" src="{% static 'trainer/images/position-example-tripwire-2.png' %}" /></div>
+
+<p>In this example, the first player plays <strong>CEBOID</strong> for 34 points, which is a respectable score. However, they are also living dangerously. Their word runs between the TL and TW square, and if their opponent has a letter like J or Z, they might have a very strong response.</p>
+
+<p>Sure enough, in this example, the opponent has a Z and is able to play <strong>ZOEA</strong>. The Z tile alone is worth 90 points in this word -- first it is tripled to 30 by the TL square, then it is again tripled to 90 by the TW square. In total, this word is worth 99 points. The player who played <strong>CEBOID</strong> would have better off passing, and may have cost themselves the game.</p>
+
+<p>Admittedly, this is an extreme example, but it illustrates a critical point. If you're playing a word into an open region of the board, be very careful to consider the risks of doing so. Try to cover or block at least some of the premium squares, so that your opponent doesn't have a devastating response to your move.</p>
+
+
+<h3>Space and the Opening, Middle-game, and Endgame</h3>
+<p>The importance of space and board position varies at different parts of the game. During the opening, either player can play a long word if their tiles come out right, and the goal is more to get some good scores and build a lead.</p>
+
+<p>During the middle-game, position becomes much more important. There may be certain parts of the board which are crowded, and only one or two places to play a longer word. If you can make a 7-letter word or you are behind in the game, it may benefit you to play longer words and open up the board more. If you are ahead, you might want to play more conservatively to limit the responses of your opponent.</p>
+
+<p>By the <a href="{% url 'trainer_article_endgame' %}">endgame</a>, position dominates. It will probably be impossible to play a 7-letter word, so you must instead think about picking off the remaining premium squares and denying your opponent a place to play that last Z or J tile. You also might be looking for places to play a 3 or 4-letter word adjacent to what is on the board already. Knowing a lot of 2 and 3-letter words is critical in this stage.</p>
+
+<h3>Conclusion</h3>
+<p>You must do more to win than find the most florid words to play from your rack. You have to analyze the lay of the board, whether you are winning/losing, which premium squares are open, and more. A few points saved here and there are enough to turn the outcome of most games.</p>
+
+<p>Our next section will deal with the importance of <a href="{% url 'trainer_article_2_3_letter_words' %}">2 and 3-letter words</a>.</p>
+
+<ul class="list-unstyled text-center">
+<li><a href="{% url 'trainer_article_overview' %}">Overview</a></li>
+<li><a href="{% url 'trainer_article_opening' %}">The Opening</a></li>
+<li><a href="{% url 'trainer_article_space_and_position' %}">Space and Position</a></li>
+<li><a href="{% url 'trainer_article_2_3_letter_words' %}">The Importance of 2 and 3 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_olaughlin_words' %}">Other Important Words, a Metric</a></li>
+<li><a href="{% url 'trainer_article_finding_words' %}">Finding Words -- Common Letter Groups</a></li>
+<li><a href="{% url 'trainer_article_drawing_7_letter_words' %}">Drawing for 7 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_jqxz' %}">Playing J, Q, X, and Z</a></li>
+<li><a href="{% url 'trainer_article_prefixes_suffixes' %}">Prefixes and Suffixes</a></li>
+<li><a href="{% url 'trainer_article_consonant_vowel_distribution' %}">Consonant and Vowel Distribution</a></li>
+<li><a href="{% url 'trainer_article_endgame' %}">The Endgame</a></li>
+<li><a href="{% url 'trainer_article_sample_game_1' %}">Sample Game 1</a></li>
+<li><a href="{% url 'trainer_article_sample_game_2' %}">Sample Game 2</a></li>
+<li><a href="{% url 'trainer_article_sample_game_3' %}">Sample Game 3</a></li>
+<li><a href="{% url 'trainer_article_sample_game_4' %}">Sample Game 4</a></li>
+<li><a href="{% url 'trainer_article_sample_game_5' %}">Sample Game 5</a></li>
+</ul>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row text-center"><h1>Strategy and Tips -- Playing J, Q, X, and Z</h1></div>
+
+<div class="row padding-05em">
+<p>The four tiles with the highest value in Words With Friends&reg; are J, Q, X, and Z. If you can make good use of these tiles when you draw them, you will have a huge leg up on winning your games. However, there are a few things to keep in mind.</p>
+
+<p>First of all, you will almost never make a 7-letter word with one of these tiles. You shouldn't let this fact influence you into making an underwhelming play. However, it is generally not good to hold onto a JQXZ tile for turn after turn. On the board, these tiles score points for you. On your rack, they take up space.</p>
+
+<p>One way to make huge scores with these letters is to play them on premium squares, such that they play in two words at once. For instance, let's say you play JOKE in one direction, and JO in the other, and the J is on a TL square. For playing what is really a pretty ordinary word, you have just scored 68 points! Your secret is that you have played the tripled J in two directions, such that it counts for 30 points in JOKE, and 30 points in JO. I've actually had a few occasions where I've played the same word in two directions at the same time -- either JO, EX, or ZA. In any case, combining JO, QI, XI, XU, AX, OX, EX, or ZA with a second word is a great way to rack up huge scores.</p>
+
+<h3>Learning JQXZ Words</h3>
+<p>It is important to study unusual words in general, but it is particularly important to learn the <a href="{% url 'trainer_jqxz_words' %}">words</a> which have J, Q, X, and Z. In general, there are very few of them. If you don't know that JO, ZA, QAT, or XIS are words, it is unlikely that you will have an easy substitute at hand (This concept overlaps with <a href="{% url 'trainer_article_olaughlin_words' %}">O'Laughlin Playability</a>). And the same is doubly true for the 2-letter words which use these letters, as illustrated in the previous paragraph.</p>
+
+<p>Here are some of the more esoteric words with one of these four letters. There are a quite a quite a few with Q.</p>
+
+<h4>J</h4>
+<p>JO, JOE, JEE, JIAO, AJEE, JIVE, FEIJOA</p>
+
+<h4>Q</h4>
+<p>QI, QAT, QIS, SUQ, QUA, QADI, QAID, QATS, QUAI, QUOD, TRANQ, QANAT, FAQIR, QINTAR, QINDAR, QIVIUT</p>
+
+<h4>X</h4>
+<p>XI, XU, VEX, IXIA</p>
+
+<h4>Z</h4>
+<p>ZA, ZEE, ZOEA, ZOEAE, NERTZ, ZAIRE, ZOWIE, ZOUAVE</p>
+
+<h3>Q and the Endgame</h3>
+<p>It is especially critical that you learn the words with have a Q, but <a href="{% url 'trainer_q_without_u_words' %}">not a U</a>. This will be helpful throughout the game, but it could be the difference between winning or losing a close endgame. If you are caught with a Q on your last few letters and can't play it, you will lose 10 points and gift them to your opponent, for a 20 point swing. A lot of games are close enough for this to make a real difference in the outcome.</p>
+
+<p>If you do find yourself with a Q near the end of the game, and for some reason can't make a word like QAT, QIS, SUQ, or QI, consider exchanging the Q if you still can. Just make sure that there really is no place to play the Q before you do this, or you will only be outsmarting yourself!</p>
+
+<h3>Increase your Chances of Drawing JQXZ</h3>
+<p>If two plays are roughly equal in other aspects, and you are not losing badly, you should tend to favor the one which will play more letters. The more turnover you have on your rack, the higher your chances of getting premium tiles like J, Q, X, and Z (not to mention blanks and S tiles). Of course, as with any maxim, you must weigh it against the board situation and whatever positional considerations are in play.</p>
+
+<h3>Conclusion</h3>
+<p>Learn the list of words above, and you will instantly become much more dangerous with your JQXZ tiles. These letters are also commonly found in many other <a href="{% url 'trainer_olaughlin_words' %}">O'Laughlin words</a>.</p>
+
+<p>Continue to our article on <a href="{% url 'trainer_article_prefixes_suffixes' %}">prefixes and suffixes</a>, or read any from the list below.</p>
+
+<ul class="list-unstyled text-center">
+<li><a href="{% url 'trainer_article_overview' %}">Overview</a></li>
+<li><a href="{% url 'trainer_article_opening' %}">The Opening</a></li>
+<li><a href="{% url 'trainer_article_space_and_position' %}">Space and Position</a></li>
+<li><a href="{% url 'trainer_article_2_3_letter_words' %}">The Importance of 2 and 3 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_olaughlin_words' %}">Other Important Words, a Metric</a></li>
+<li><a href="{% url 'trainer_article_finding_words' %}">Finding Words -- Common Letter Groups</a></li>
+<li><a href="{% url 'trainer_article_drawing_7_letter_words' %}">Drawing for 7 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_jqxz' %}">Playing J, Q, X, and Z</a></li>
+<li><a href="{% url 'trainer_article_prefixes_suffixes' %}">Prefixes and Suffixes</a></li>
+<li><a href="{% url 'trainer_article_consonant_vowel_distribution' %}">Consonant and Vowel Distribution</a></li>
+<li><a href="{% url 'trainer_article_endgame' %}">The Endgame</a></li>
+<li><a href="{% url 'trainer_article_sample_game_1' %}">Sample Game 1</a></li>
+<li><a href="{% url 'trainer_article_sample_game_2' %}">Sample Game 2</a></li>
+<li><a href="{% url 'trainer_article_sample_game_3' %}">Sample Game 3</a></li>
+<li><a href="{% url 'trainer_article_sample_game_4' %}">Sample Game 4</a></li>
+<li><a href="{% url 'trainer_article_sample_game_5' %}">Sample Game 5</a></li>
+</ul>
+
+</div>
+
+{% endblock %}

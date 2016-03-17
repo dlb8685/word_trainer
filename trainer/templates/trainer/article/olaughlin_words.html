@@ -1,0 +1,64 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row text-center"><h1>Strategy and Tips -- Other Important Words, a Metric</h1></div>
+
+<div class="row padding-05em">
+<p>There are roughly 173,000 words in the Words With Friends&reg; dictionary. Unless you plan to forsake your family, your friends, and your life, there is very little chance of you memorizing them. Even if you assume that a third of these words are over 10 letters, and would never appear in a normal game, you still are faced with a daunting task.</p>
+
+<p>However, some of these words are much more important to know than others. Let's take two hypotheticals to demonstrate this. Let's say that you have the letters <strong><a href="/get-matching-words/?search_input=AEINORT">AEINORT</a></strong> in your rack. There is no 7-letter word these can make, but there are ten 6-letter words. If you didn't know about <strong>AROINT</strong> or <strong>NORITE</strong>, you would still be fine if you knew the more common words like <strong>ORIENT</strong>, <strong>ORNATE</strong>, <strong>RATION</strong>, <strong>RETAIN</strong>, or <strong>RETINA</strong>. In other words, it's not a disaster in this situation if you don't know the word <strong>AROINT</strong>.</p>
+
+<p>However, let's say that you have the letters <strong><a href="/get-matching-words/?search_input=ADINQRZ">ADINQRZ</a></strong> in your rack. In this case, there is only one 6-letter word you can make -- <strong>QINDAR</strong>. Furthermore, there are only a handful of 5-letter words, and none of of those use the Q or Z. In this scenario, you could miss out on a lot of value by not knowing the word <strong>QINDAR</strong>.</p>
+
+<p>One metric that has been developed to measure this value is <strong>O’Laughlin playability</strong>. In short, <strong>QINDAR</strong> would have a much higher O’Laughlin playability than <strong>AROINT</strong>, because the consequences of not knowing <strong>QINDAR</strong> are likely to be more severe if the situation comes up in a game. The metric was computed by John O’Laughlin, using Quackle (per <a href="http://www.eugenedeon.com/scrabble/">this site</a>).</p>
+
+<p>Another dimension of this metric is the likelihood of drawing the letters on question. There are hundreds of letter combinations which can only make a single 7-letter or 8-letter word. However, <strong>ERASION</strong>, for instance, is ranked the highest because you are much more likely to draw these tiles than, for instance, <strong>ZAMBUCK</strong>.</p>
+
+<p>We have a <a href="{% url 'trainer_tools_olaughlin_words' %}">tool</a> on this site to help you memorize these words. But for now, to give a general idea, here are the ten Words With Friends&reg; words with the highest O’Laughlin playability for a given number of letters. Learning this list alone will be immensely helpful. Of particlar importance are the 2 and 3-letter words within this set.</p>
+<div class="text-center">
+<h4>2 Letters</h4>
+<p>XI, OX, QI, ZA, EX, AX, JO, XU, OF, IF</p>
+
+<h4>3 Letters</h4>
+<p>QAT, QIS, QUA, JOE, ZEE, OXO, AXE, SUQ, JEE, VEX</p>
+
+<h4>4 Letters</h4>
+<p>QADI, QAID, QATS, JIAO, ZOEA, QUAI, QUOD, IXIA, AJEE, JIVE</p>
+
+<h4>5 Letters</h4>
+<p>TRANQ, QANAT, FAQIR, ZOEAE, QUEEN, QUOTE, AQUAE, NERTZ, ZAIRE, ZOWIE</p>
+
+<h4>6 Letters</h4>
+<p>QINTAR, QINDAR, QIVIUT, FEIJOA, EQUATE, QUIVER, ZOUAVE, QUINOA, QUAERE, QUAVER</p>
+
+<h4>7 Letters</h4>
+<p>ERASION, ETESIAN, ATONIES, INERTIA, TAENIAE, SERIATE, INOSITE, ROSEATE, SENARII, ANISOLE</p>
+
+<h4>8 Letters</h4>
+<p>AERATION, INERTIAE, AEROLITE, ANTERIOR, INERTIAL, DETAINEE, DAINTIER, ERADIATE, TENORITE, ETIOLATE</p>
+</div>
+
+<h3>Conclusion</h3>
+<p>A more extensive list of these words can be found <a href="{% url 'trainer_olaughlin_words' %}">here</a>. You can also continue to our next section, covering <a href="{% url 'trainer_article_finding_words' %}">common letter groups</a>.</p>
+
+<ul class="list-unstyled text-center">
+<li><a href="{% url 'trainer_article_overview' %}">Overview</a></li>
+<li><a href="{% url 'trainer_article_opening' %}">The Opening</a></li>
+<li><a href="{% url 'trainer_article_space_and_position' %}">Space and Position</a></li>
+<li><a href="{% url 'trainer_article_2_3_letter_words' %}">The Importance of 2 and 3 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_olaughlin_words' %}">Other Important Words, a Metric</a></li>
+<li><a href="{% url 'trainer_article_finding_words' %}">Finding Words -- Common Letter Groups</a></li>
+<li><a href="{% url 'trainer_article_drawing_7_letter_words' %}">Drawing for 7 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_jqxz' %}">Playing J, Q, X, and Z</a></li>
+<li><a href="{% url 'trainer_article_prefixes_suffixes' %}">Prefixes and Suffixes</a></li>
+<li><a href="{% url 'trainer_article_consonant_vowel_distribution' %}">Consonant and Vowel Distribution</a></li>
+<li><a href="{% url 'trainer_article_endgame' %}">The Endgame</a></li>
+<li><a href="{% url 'trainer_article_sample_game_1' %}">Sample Game 1</a></li>
+<li><a href="{% url 'trainer_article_sample_game_2' %}">Sample Game 2</a></li>
+<li><a href="{% url 'trainer_article_sample_game_3' %}">Sample Game 3</a></li>
+<li><a href="{% url 'trainer_article_sample_game_4' %}">Sample Game 4</a></li>
+<li><a href="{% url 'trainer_article_sample_game_5' %}">Sample Game 5</a></li>
+</ul>
+
+</div>
+{% endblock %}

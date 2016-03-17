@@ -1,0 +1,22 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<h1>Words with J, Q, X, or Z</h1>
+
+<p>Below is a full list of words with a J, Q, X, or Z.</p>
+
+<p>Pulling a high-value letter like J, Q, X, or Z can be a <a href="">mixed blessing</a>. On the one hand, these are the highest scoring letters in many word games. On the other hand, they can be very difficult to play or get rid of.</p>
+
+<p>Fortunately, <strong>The Word Trainer</strong> has a number of learning <a href="">tools</a> to facilitate this process.</p>
+
+{% for word_match in word_matches %}
+<h3>{{ word_match.letter }}</h3>
+    {% for result in word_match.results %}
+    <h4> {{ result.length }} Letters </h4>
+        {% for word in result.word_list %}
+<a href="http://www.merriam-webster.com/dictionary/{{ word.lower }}">{{ word }}</a> {% if not forloop.last %}-{% endif %} 
+        {% endfor %}
+    {% endfor %}
+{% endfor %}
+
+{% endblock %}

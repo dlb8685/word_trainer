@@ -1,0 +1,60 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row"><h1 class="text-center">Tools - Word Recognition</h1></div>
+
+<div class="row">
+<div class="text-center">
+<p>In this game, we show a "word" which may or may not be real. Your job is to guess. Try playing a few rounds.</p>
+</div>
+</div>
+
+<div class="row">
+<div class="text-center">
+<h3>{{ word }}</h3>
+</div>
+</div>
+
+<div class="row">
+<div class="text-center">
+<p class="lead">Is this a valid word?</p>
+</div>
+</div>
+
+<div class="row">
+<div class="text-center">
+<a class="btn btn-success" href="{% url 'trainer_tools_is_this_a_word' %}?word={{ word }}&guess=yes" role="button" >Yes</a>
+<a class="btn btn-danger" href="{% url 'trainer_tools_is_this_a_word' %}?word={{ word }}&guess=no" role="button" >No</a>
+</div>
+</div>
+
+<div class="row">
+<div class="text-center margin-top-1em">
+<p>All words are checked against the Words With Friends&reg; dictionary. Every effort is made to keep our list up to date.</p>
+</div>
+</div>
+
+{% if previous_word %}
+<div class="row">
+<div class="text-center">
+    {% if previous_is_correct %}
+    <h4>Your Previous Guess: <span class="text-success">Correct</span></h4>
+    {% else %}
+    <h4>Your Previous Guess: <span class="text-danger">Incorrect</span></h4>
+    {% endif %}
+    
+    {% if previous_is_correct and previous_guess == 'yes' %}
+    <p>The previous word, <strong>{{ previous_word }}</strong>, was a real word.</p>
+    {% elif previous_is_correct and previous_guess == 'no' %}
+    <p>The previous "word", <strong>{{ previous_word }}</strong>, was not a real word.</p>
+    {% elif not previous_is_correct and previous_guess == 'yes' %}
+    <p>The previous "word", <strong>{{ previous_word }}</strong>, was not a real word.</p>
+    {% else %}
+    <p>The previous word, <strong>{{ previous_word }}</strong>, was a real word.</p>
+    {% endif %}
+</div>
+</div>
+{% endif %}
+
+
+{% endblock %}

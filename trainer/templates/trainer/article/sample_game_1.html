@@ -1,0 +1,382 @@
+{% extends 'trainer/base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+<div class="row text-center"><h1>Sample Game 1</h1></div>
+
+<div class="row padding-05em">
+<p>In order to illustrate some concepts from elsewhere in this guide with live, real-game examples, I have decided to play a best of 7 series against the Words With Friends&reg; AI bot. I also just think it would be fun to do so.</p>
+
+<p>I've taken the best of 7 concept from other competitions like the World Series or the NBA Finals. There are also different types of games, and hopefully we can see that by playing through a few different examples. For each move, I will write a few sentences about the state of the board, my thought process, and my final move.</p>
+
+<p>A couple of disclaimers are in order.</p>
+
+<ol>
+<li>I am making free use of helpers like the <a href="{% url 'trainer_get_matching_words' %}">Lookup Tool</a> and <a href="{% url 'trainer_get_prefix_suffix_list' %}">Prefix-Suffix</a> finder. This series is about illustrating strategic and tactical play, not about demonstrating my own shortcomings in vocabulary by missing an obvious word.</li>
+<li>I make no claims to be an expert player at this game. I believe I'm pretty solid compared to a random person on the street, but in no way should these games be taken an example of world-class play.</li>
+</ol>
+
+<p>With that being said, let's proceed to the summary for Game 1.</p>
+</div>
+
+<div class="row text-center"><h3>Move 1: MOROSE</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">18 points. Winning 18-0.</p>
+
+<div class="text-center margin-05em"><img class="img-article" src="{% static 'trainer/images/game1_move1_morose.png' %}" /></div>
+
+<p>There are, unfortunately, no 7-letter words in our initial rack. However, we can play <strong>MOROSE</strong> for a score of 18.</p>
+
+<p>The decision to play to the left is more likely to lead to an open game, with longer words.</p>
+
+<p>We could place either the M or the O on the Double-Word square, which is aligned with the TL and TW squares above and below. I am choosing to play the O in this square to reduce the odds of our opponent having an 8-letter word which could hit the TW square. There are fewer 8-letter words which begin or end with an O, vs. an M.</p>
+</div>
+
+
+<div class="row text-center"><h3>Move 2: KOHL</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">21 points. Winning 39-11.</p>
+
+<p>The WWF AI has played <strong>COSS</strong>. Since there no two-letter words with C, this move will probably block the action somewhat towards the top-center of the board.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move2a_coss.png' %}" /></div>
+
+<p>The rack we have drawn contains only a single vowel. This constrains our play and leaves us with a decision to make.</p>
+
+<p>One option would be to simply exchange the rack. However, we have some decent consonants and can probably make a word for 20-30 points.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move2a_khan.png' %}" /></div>
+
+<p>The highest-scoring option would be to play <strong>KHAN</strong>, as pictured. However, this leaves us vulnerable to a huge reply from the opponent. They could, with the right letters, hit a TL and TW on the same turn and run up a massive score. This is particularly true since we would be placing a K in the relevant column.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move2_kohl.png' %}" /></div>
+
+<p>Instead, we can play <strong>KOHL</strong> for 21 points. It is in a safer place, and it also unloads three consonants. Since we only have one vowel, the A, it would be better to only play consonants.</p>
+
+<p>There is one downside to this move. <strong>KOHLS</strong> is a valid word, and the S would be on a TL space. But I am proceeding with it in light of its other advantages.</p>
+</div>
+
+
+
+<div class="row text-center"><h3>Move 3: Exchange 7 Letters</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">0 points. Winning 39-24.</p>
+
+<p>The WWF AI has played <strong>DEL</strong>, and scored 13 points in the process.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move3a_del.png' %}" /></div>
+
+<p>The AI has also split the left side of the board very distinctly into a top and bottom half. Since there is no letter that can prefix <strong>DEL</strong>, or <strong>MOROSE</strong>, there is now effectively a wall to the left of those two words.</p>
+
+<p>There is also a wall where the C in <strong>COSS</strong> and the K in <strong>KOHL</strong> meet. No words can join into that area. If things continue as they have gone so far, this looks to be a relatively closed game.</p>
+
+<p>We are still heavier on consonants than we would like to be, and nothing in our rack can make a longer word than five letters. In fact, from a scoring standpoint, one of our best moves nets us only 12 points (playing <strong>ENTIA</strong> into the DW).</p>
+
+<p>It's a tough decision, but in this case I have decided to swap the entire rack. We cannot gain any kind of points this turn, and any move we make is likely to open the board up significantly for our opponent's next move. Hopefully we can draw something to make a longer word on our next turn.</p>
+</div>
+
+
+
+<div class="row text-center"><h3>Move 4: BRAWEST</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">61 points. Winning 100-36.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move4a_rush.png' %}" /></div>
+
+<p>The WWF AI has played <strong>RUSH</strong> for a score of 12 points. Meanwhile, our draw has worked out well for us. We picked up a blank and an S, and the letters can make a 7-letter word -- <strong>BRAWEST</strong>.</p>
+
+<p>There are actually two places to stick this. One is adjacent to RUSH for 61 points. The other is vertically, to also make <strong>KOHLS</strong>, for 77 points. On points and elegance, the decision would favor the second option.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move4_brawest.png' %}" /></div>
+
+<p>We have no idea, however, what our opponent might hold or how they will play it. If we played the 77-point option, we would be sticking our B right in the danger zone between a TL and a TW. With the right letters, our opponent could easily make a 100-point move or more!</p>
+
+<p>After deliberating, I have decided to play the 61-point version, because it is better defensively.</p>
+</div>
+
+
+
+<div class="row text-center"><h3>Move 5: ADZ</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">30 points. Winning 130-81.</p>
+
+<p>The WWF AI has played <strong>GOX</strong> for 45 points. This was an excellent use of the DL square below the E in <strong>BRAWEST</strong>. The X on that square counts for 16 points in EX, and another 16 points in <strong>GOX</strong>, for 32 points total. Putting a high-value letter on a premium square, such that it plays in two words at once, is rarely a bad choice.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move5a_gox.png' %}" /></div>
+
+<p>Our letters are again unbalanced, with only two vowels. On the other hand, we have drawn a Z. However, we are still in a tough spot -- using these letters alone, there is no word longer then four letters that we can play.</p>
+
+<p>There is also no obvious place on the board to maximize the value from our Z. The only two-letter word that Z plays with is A, and the lone A on this board is well-covered. After looking at the available words, along with this board, however, we find that the word <strong>ADZ</strong> can play off the end of <strong>RUSH</strong>, into a DW square. This gives us 30 points without exposing too much to the opponent (there is a chance he could bonus into the D from the TW at top right).</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move5_adz.png' %}" /></div>
+
+<p>30 points is more than enough to warrant playing (as opposed to exchanging), and that is what we do here.</p>
+</div>
+
+
+<div class="row text-center"><h3>Move 6: EVES</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">29 points. Winning 159-102.</p>
+
+<p>The WWF AI has played <strong>FUTZ</strong> for 21 points. As hoped for, extending the board with ADZ did not turn out to be too dangerous for us.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move6a_futz.png' %}" /></div>
+
+<p>We still have an awkward assortment of letters, but at least the vowel-consonant distribution is evening out. We can also expect that the game will be very closed as we continue. The C in <strong>COSS</strong>, the Z in <strong>FUTZ</strong>, the <strong>EX</strong> (which has no 1-letter suffix), and the <strong>DEL/MOROSE</strong> to the left, all block off significant parts of the board. It would be almost impossible to play a 7-letter word on this board, even if a clean one was sitting right on our rack.</p>
+
+<p>Fortunately, we are also winning. Not by a ton, but by enough that we don't need to take wild chances in opening up the board right now.</p>
+
+<p>It would be nice to play a word from the DW down to the TL by <strong>KOHL</strong>, but there is no 5-6 letter ending in S that we can play. We also have nothing that makes a 2-letter word with the F in <strong>FUTZ</strong>, which could be extended to the TW at top-right.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move6_eves.png' %}" /></div>
+
+<p>After searching for awhile, the best move I can find is to play <strong>EVES</strong> for 29 points. This is a decent score for a move, and doesn't give up too much in terms of position. While we open up the TW squares in bottom-left, we also occupy the TL and leave only three empty squares to build a word.</p>
+
+<p class="text-danger"><em>NOTE: Looking at this later, it would have also been possible to play <strong>THESE</strong>, hitting the TW, and making EF into <strong>FUTZ</strong>. This would have scored 32 points and been a better strategic play. But I will leave my initial analysis above as is.</em></p>
+</div>
+
+
+<div class="row text-center"><h3>Move 7: OUPHE</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">56 points. Winning 215-141.</p>
+
+<p>The WWF AI made a decent move for 39 points, prepending BR to the <strong>EVES</strong> that we just played, to make <strong>BREVES</strong>.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move7a_breves.png' %}" /></div>
+
+<p>Since we now have letters which can make a 2-letter word with the F in <strong>FUTZ</strong> (OF and EF both work), that is where our attention should be directed. Not only are we likely to make our best score by using the TW square (1,12), but we cannot afford to risk a move here by our opponent.</p>
+
+<p>Fortunately, there are a decent number of 5-letter words we can make which end in E or O. Our best choice puts the H on the TL square, for it to be multiplied by nine. We will play <strong>OUPHE</strong> here to do so. This will get us a very solid score of 56 points.</p>
+
+<p>One thing to be aware of is that this might speed the action up for the next couple of turns. As explained earlier, the board has been pretty locked down. However, our move will let our opponent play across the top three rows of the board without obstruction. It is possible that we in turn could play a long word -- either adjacent to our opponent, or down the right side of the board.</p>
+</div>
+
+
+<div class="row text-center"><h3>Move 8: NADA</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">16 points. Winning 231-175.</p>
+
+<p>The WWF AI has played <storng>EQUAL</strong> for 34 points, taking advantage of the DW square we opened up. However, we came out ahead overall on the last turn.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move8a_equal.png' %}" /><img src="{% static 'trainer/images/game1_move8a_tilebag.png' %}" /></div>
+
+<p>If we had an S, our opponent's play would open up the TW and the right-column of the board for us. At first glance, it might appear that our opponent took a real chance here.</p>
+
+<p>However, if we look more closely at the board, all five S tiles have now been played. A glance at the Tile Bag confirms this. Since no other letter besides S can be played at the end of <strong>EQUAL</strong>, our opponent's move actually <em>closes</em> the upper-right part of the board. Only a blank can open that area of the board at this point. Without a blank, neither player can touch the TW square in that area, and neither player is likely to give the other player an opportunity to do so.</p>
+
+<p>As for our own letters, they do not leave us with a long word to play. At this point, we have two options. One would be to use the V in <strong>BREVES</strong> and try for a TW, which could be done with <strong>VAIN</strong> or <strong>VITA</strong>. This would give a 27-point score, which is decent.</p>
+
+<p>However, we are currently winning. Our opponent will only get back into the game if they have a monster word to play. One way that could happen would be for the opponent to play a 7-letter word from the TW in upper-left to the square above the E in <strong>EQUAL</strong>. This would hit two TL squares and could lead to a massive score. We might suddenly find ourselves 25 or 30 points behind.</p>
+
+<p>Therefore, we will sacrifice a few points and play across the top row. This is a defensive play that we are making, to close that row and prevent a possible catastrophe.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move8_nada.png' %}" /></div>
+
+<p>The specific word we play is <strong>NADA</strong>, which puts the N and D on TL squares and gives us a score of 16.</p>
+</div>
+
+
+<div class="row text-center"><h3>Move 9: PAGER</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">30 points. Winning 261-202.</p>
+
+<p>The WWF AI has played <strong>RIF</strong> for 27 points. Immediately we notice that this opens up the TW square above the R.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move9a_rif.png' %}" /></div>
+
+<p>We start looking for 5-letter words without a 1-letter prefix to play here. This will keep the other TW in that area closed from our opponent. They will then be unable to play into the space to the right of our word. Essentially, we can use the threat of playing a TW to forestall a number of moves from our opponent.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move9_pager.png' %}" /></div>
+
+<p>A specific word that will accomplish this goal, while providing a decent score, is <strong>PAGER</strong>. There is no 1-letter prefix to <strong>PAGER</strong>, and the P and G will provide a decent score of 30.</p>
+</div>
+
+<div class="row text-center"><h3>Move 10: OUT (12 pts)</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">12 points. Winning 273-256.</p>
+
+<p>Our AI opponent has responded with <strong>TANNERY</strong>, playing all seven letters and scoring 54 points. Suddenly, the game is almost tied.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move10a_tannery.png' %}" /></div>
+
+<p>Our own rack consists of six vowels and one consonant. If we had a better set of letters, it would be a simple matter to use the TL square above the Y, in tandem with either TW square in the lower-right, and rack up a strong score with our response.</p>
+
+<p>However, with the letters we do have, our options are very limited. If it were early in the game, we would probably just exchange and hope for something better. At this point in the game, though, with two different TW squares open, it is simply too risky to give our opponent a second shot to score big. If we swapped tiles, and they had a strong wrong which used the TL/TW square combination, they could suddenly have a significant lead.</p>
+
+<p>Therefore, we could again focus on playing defense here. We can't make a great word, but we can at least occupy some of the premium squares so that our opponent can't blow the game open.</p>
+
+<p>It is in this type of situation where a broad Words With Friends&reg; vocabulary becomes extremely important. It would be terrific if there were even a single 4-letter word that would play from the TL-TW row above the Y in <strong>TANNERY</strong>. Unfortunately, our letters can only make one 4-letter word, <strong>ETUI</strong>, and the EY that would be required is invalid.</p>
+
+<p>Another option is to play a 3-letter word from Y down to the TW square in lower-right. This would block that square, but would also open up the entire bottom row. If our opponent played another 8-letter word there, hitting premium squares, the game might be effectively over.</p>
+
+<p>With all of that being said, let's try to play something along the top of <strong>TANNERY</strong> that will muddle that section of the board, and hopefully keep the game even until we can pull some better letters. This is where familiarity with 2 and 3-letter words is essential.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move10_out.png' %}" /></div>
+
+<p>After looking at a couple of options, we can play <strong>OUT</strong> and combine it with <strong>OY</strong>. This will block one TW square, and keep the damage under control if our opponent uses the other one (by at least preventing them from putting a good letter on the TL and having its value be multiplied by nine).</p>
+
+<p>Normally, we would be begging our opponent to play <strong>OUTS</strong> on their turn with another long word, which would devastate us. However, if you'll remember from earlier, there are no S tiles left to be played. Since no other letter is a suffix to <strong>OUT</strong>, we are actually blocking the TW square permanently with this move! Knowing which tiles are still to be played can be very important in a situation like this.</p>
+
+<p>Having said all of this, I am now playing <strong>OUT</strong> for 12 points. The point value is, needless to say, terrible. But this should hopefully prevent the WWF AI from getting a huge score, and maybe we can draw something better next turn.</p>
+
+<p class="text-danger">NOTE: In retrospect, there was still a blank tile outstanding when we played <strong>OUT</strong>, which makes this move considerably more risky than implied in my analysis above.</p>
+</div>
+
+
+
+<div class="row text-center"><h3>Move 11: VIAL</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">27 points. Winning 300-269.</p>
+
+<p>Our opponent has played <strong>MA</strong> for 13 points. We don't know exactly what letters they have, but it looks like our blocking maneuver from last turn worked.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move11a_ma.png' %}" /><img src="{% static 'trainer/images/game1_move11a_tilebag.png' %}" /></div>
+
+<p>Unfortunately, we continue to have a lopsided letter distribution. We have three I tiles, two E's, and only one consonant. It looks like this game will be going to the wire.</p>
+
+<p>We have a few options here. We could just swap our tiles. We could play something like <strong>VIAL</strong> from the V and get a decent score. Or we could look for something which might utilize any number of DW squares while combining with the words on the board.</p>
+
+<p>At this point in the game, we can look at the Tile Bag and make a reasonable guess as to what we might receive. There are 24 tiles left (17 in the bag, and 7 on our opponent's rack). The only high-value letter out is the J. There is still one blank. And, there are 9 vowels and 15 consonants.</p>
+
+<p>Early in the game, it might make sense to chance the Tile Bag. At this point though, even if we drew the perfect 7-letter word, it might be impossible to play it. So many areas of the board are now closed off or blocked that we would need an absolutely perfect draw for it to pan out.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move11_vial.png' %}" /></div>
+
+<p>Furthermore, we can make 27 points by playing <strong>VIAL</strong> into the TW score. This is a high enough score that it doesn't really make sense to swap and take a 0. It also blocks a TW square from being used by our opponent.</p>
+
+<p>The one risk from this move is that our opponent has an 8-letter word, beginning with L, that would stretch all the way to the TW square. If this happens, we are probably in trouble. But, with no A's left, plus a J, C, and V still out, we can take the chance that the AI probably can't play a bonus word on its next turn.</p>
+</div>
+
+
+<div class="row text-center"><h3>Move 12: YE</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">17 points. Winning 317-284.</p>
+
+<p>Our opponent has played <strong>ODE</strong> for 15 points. This is a pretty good outcome for us, given some of the fears from last turn.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move12a_ode.png' %}" /></div>
+
+<p>We still lack an obvious good move, and have an awkward distribution of letters. It is at this point that we can really start to look for premium squares and a series of short words we can make, to consolidate our narrow lead and keep the board closed.</p>
+
+<p>The other option would be to swap tiles, but it is a little late in the game to make that worthwhile.</p>
+
+<p>First of all, let's decide where we <em>don't</em> want to play. There are a couple of areas that are well-blocked, in which the first player to "activate" will invariably come out worse for the deal.</p>
+
+<p>One such area is along the right side of the board between <strong>EQUAL</strong>, <strong>FUTZ</strong>, and <strong>OUT</strong>. The first player who plays into this area might gain a DW or TL square on a short word, but they will be giving up the chance for their opponent to bonus out with a 7 or 8-letter word which hits the TW square. This would obviously be a disaster, and thus this area is something of a no-man's land at the moment.</p>
+
+<p>It would also be a questionable decision to play into the area between the TW/TL squares between <strong>PAGER</strong> and <strong>MA</strong>. Those are almost unreachable at the moment, but the first player who changes that equation risks a much stronger response from their opponent.</p>
+
+<p>Playing anything in the bottom of <strong>TANNERY</strong> is also risks opening the TW square more, and in any case we don't have good letters at the moment to combine with that word.</p>
+
+<p>There is nothing great to play on the B in <strong>BREVES</strong> or the L in <strong>VIAL</strong> with what we have.</p>
+
+<p>There is still the risk of our opponent playing a huge word off of the L in <strong>VIAL</strong>. In fact, that is practically the only significant risk we have right now. There are a very few words, like <strong>EMPANADA</strong>, which might combine with <strong>NADA</strong> in the top row, but the letters for our opponent to do so have already been played.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move12_ye.png' %}" /></div>
+
+<p>After searching for awhile, playing <strong>YE</strong> adjacent to <strong>VIAL</strong> could serve us well. It doubles the Y in two different words, and also makes it more difficult for our opponent to use the L in <strong>VIAL</strong> in devastating fashion.</p>
+</div>
+
+
+<div class="row text-center"><h3>Move 13: ETH</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">12 points. Winning 329-299.</p>
+
+<p>Our AI opponent has played <strong>END</strong> for 15 points. Without becoming too overconfident, we seem to have a good lead right now, so long as we can prevent our opponent from playing a premium word.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move13a_end.png' %}" /></div>
+
+<p>We also continue to lack the letters to make a great score for ourselves, so let's see if we can't get a moderate score while continuing our scorched-earth strategy. We could do something like <strong>TITHE</strong> on the T in <strong>OUT</strong>, but in return for scoring 20 points we would open up a huge new part of the board for a counter-play. Let's see what else we could do instead.</p>
+
+<p>We know there is a still a J and a blank out there. An obvious move we can see which would get our opponent back into things, would be to play <strong>JOYED</strong> into the TW in lower-right. This would be a 50 point play or more. Let's do something to block that. Unfortunately, there is no word we can play on the OY ourselves to use that square, so we must try something else.</p>
+
+<p>If we play <strong>ETH</strong>, we are giving ourselves the best chance on defense. It will leave the stem <strong>HOY</strong> pointing towards the TW square. The three words which our opponent might then play to use the TW are <strong>SHOYUS</strong>, <strong>HOYAS</strong>, and <strong>HOYLE</strong>. However, two of these are impossible given the letters in play. There are no A or S tiles left, and SHOYUS and HOYAS both use two of those. Even with a blank, our opponent would be one tile short.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move13_eth.png' %}" /></div>
+
+<p>If our opponent has a blank and an E, they could play <strong>HOYLE</strong>. This would be worth 24 points, which would not be terrible for us at this point in the game. Alternatively, we could always hope to draw those tiles ourselves. With 13 tiles left, there's about a 29% chance that our opponent has both the E and blank in their rack.</p>
+
+<p>So we play <strong>ETH</strong>. Again, as a defensive play to close this game out.</p>
+</div>
+
+
+<div class="row text-center"><h3>Move 14: GIT/MET</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">17 points. Winning 346-311.</p>
+
+<p>Our AI opponent has played <strong>TIN</strong> for 12 points. We now know exactly what letters they have, and neither player will be drawing any more letters for the rest of the game. We are definitely in the endgame.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move14a_tin.png' %}" /><img src="{% static 'trainer/images/game1_move14a_tilebag.png' %}" /></div>
+
+<p><strong>TIN</strong> opens the TL square by I. Our opponent has the tiles to more than take advantage of this. For instance, using their blank along with J to make <strong>JET</strong> would score 36 points for them, and they would be in the lead.</p>
+
+<p>Our opponent's move does not open up the TW square. There is no one letter that can prefix <strong>TEND</strong> and form part of a word there, so our sole focus should be using the TL square by TIN and denying it to our opponent.</p>
+
+<p>Our highest-value letter is G, so let's put it on the TL. Then we can play the T, making <strong>GIT</strong> and <strong>MET</strong>. This will score us 17 points and forestall the danger of a word like <strong>JET</strong>.</p>
+
+<p>We will now be left with nothing but five vowels, but our AI opponent will be facing the opposite problem with its consonants. Let's play <strong>GIT</strong> and hope that our 35-point lead will be enough to see us through to the end of this game.</p>
+</div>
+
+
+<div class="row text-center"><h3>Move 15: WOE</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">18 points. Winning 364-322.</p>
+
+<p>Our AI opponent has played <strong>WIT</strong> for 11 points, trying desperately to open the TW square and somehow get back into this.</p>
+
+<p>Our analysis is pretty similar to last turn. We need to preserve our lead and prevent any heroics from our opponent. In this case, that means blocking the TW square.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move15_woe.png' %}" /></div>
+
+<p>An obvious way to do this is to play <strong>WOE</strong>. It is the only word we can make which will play to that square, and it makes our highest possible score of 18 points.</p>
+
+<p>From here on out, we will use our I tiles to make small words until the game is over. We should be far enough ahead to win, with the position we have.</p>
+</div>
+
+
+<div class="row text-center"><h3>Move 16: IN</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">6 points. Winning 370-329.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move16_in.png' %}" /></div>
+
+<p>Our AI opponent has played <strong>GI/IN</strong> for 11 points. By now, we seem to have the game pretty much under control. Now we are simply looking for good places to play our I tiles until we can close this out.</p>
+</div>
+
+
+<div class="row text-center"><h3>Move 17: DI</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">6 points. Winning 376-226.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move17_di.png' %}" /></div>
+
+<p>Our opponent played <strong>CEL</strong> for 7 points. There's not much left to say here. We're just running the game down and should win it next turn.</p>
+</div>
+
+
+<div class="row text-center"><h3>Move 18: BI</h3></div>
+<div class="row padding-05em">
+<p class="lead text-center">5 points. GAME OVER. I won 391-333.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move18_bi.png' %}" /></div>
+
+<p>Our opponent played <strong>EVE</strong> for 7 points. We'll just play our last I and close out the game. Since our opponent got stuck with a J late in the game, our score will get a nice bump.</p>
+
+<p>It didn't matter in this specific case, but getting stuck with a J or a Q in the last turn can be devastating in a close game. Without the points from the J, I would have won by 38 points. The J added 10 points for me, and subtracted 10 points from my opponent, increasing the margin of victory to 58 points. A 20 point-swing would definitely be sufficient to change the outcome of many games.</p>
+
+<p>A Q can be especially devastating, because this letter is often hard to play without a U. It can become very important to know that <strong>QI</strong>, <strong>QAT</strong>, and <strong>QIS</strong> are valid words, in order to avoid being hung with a huge loss of points.</p>
+</div>
+
+
+<div class="row text-center"><h3>Conclusion/Thoughts</h3></div>
+<div class="row padding-05em">
+<p>I am now winning the series 1-0 against the Words With Friends&reg; AI. This game was a pretty closed, tactical affair, with a relatively low final score.</p>
+
+<p>A lot of this was dictated by letter distribution. During a few key turns in the middle-game, I consistently had nearly all vowels, and had to play defensive words to block premium squares.</p>
+
+<p>Since this was the first time I've played the WWF AI opponent, I was worried after a few moves that it was going to be a yawner. I took a huge early lead and the opponent didn't seem to be making any strong plays. However, it got right back into it with <strong>TANNERY</strong>, and really made me think about how to get through the last few turns.</p>
+
+<p>Hopefully this game has been a good example of how to play defense and deny premium squares. I also hope that the next game is a little more free-flowing and offensive. See how subsequent games in this series went by continuing to <a href="{% url 'trainer_article_sample_game_2' %}">Game 2</a>.</p>
+</div>
+
+{% endblock %}

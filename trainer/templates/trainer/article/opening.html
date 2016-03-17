@@ -1,0 +1,91 @@
+{% extends 'trainer/base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+<h1>Strategy and Tips -- The Opening</h1>
+
+<p>In this section we explore some things to think about while opening a game in Words With Friends&reg;. You can also read our <a href="{% url 'trainer_article_overview' %}">Overview</a> of Words With Friends&reg;, or select another section to read from the bottom of this page.</p>
+
+<h3>Opening the Board</h3>
+<p>Half of the time, you will have the first turn. You will have a clean board to play on, and a rack with seven letters in it.</p>
+
+<p>If you are fortunate enough to have a 7-letter word on your rack, and you can find it, then your decision is simple. Play it, and make sure to cover one of the DW squares. You are off to a great start.</p>
+
+<p>Many other times, however, you will have to play a shorter word. If you cannot play a 5-letter word to utilize the DW square, it might be better to play the shortest word possible and unload some undesirable letters. Let your opponent open up the board, if they desire, and come back with a good chance at a 7-letter word. If your score in the first turn will be low no matter what, play for a higher score in your next couple of turns.</p>
+
+<p>The direction in which you play will influence the development of the game as well. IF you play a longer word, to the left or top of the board, then the game will tend to be more open. If you play a shorter word, to the right or bottom of the board, then the game will tend to be more closed. This is because it is generally easier to add to words, than to play into them, especially if you have an S or a blank.</p>
+
+
+<h3>Managing Your Letters</h3>
+<p>Even if you do have a decent word, you might elect to play something shorter. Let's say you have the letters <strong>AEILPRS</strong>. You could play a 6-letter word like <strong>ASPIRE</strong> or <strong>PEARLS</strong>, but there are good reasons to consider something much shorter. For one, you would be using an S tile without adding it to the end of another word. Since the S tiles are very useful in this regard, it would not be best to play it on your first turn for a word which would not hit the 7-letter bonus.</p>
+
+<p>Secondly, you have a good chance to draw for a 7-letter word if you play <strong>AEILPRS</strong> correctly. Let's suppose that you play <strong>PI</strong> on your first turn. You will be left with the letters <strong>AELRS</strong>, which happens to be one of the best 5-letter stems for drawing at a bonus. In fact, there are almost 300 7-letter words that use the tiles <strong>AELRS</strong> (we will cover <a href="{% url 'trainer_article_drawing_7_letter_words' %}">word stems</a> in detail later on -- here are the <a href="{% url 'trainer_n_letter_word_stems' 5 %}">5-letter combinations</a> which can build the largest number of 7-letter words).</p>
+
+<h3>Prudent Play -- The First Turn</h3>
+<p>If you do play a word that is 5-7 letters, you will have a choice about which letter to put on the DW square. If possible, try to avoid playing something like a S, D, E, or R. Doing so makes it <em>much</em> easier for your opponent to play an 8-letter word and hit one of the TW squares, which would put them way ahead of you early on.</p>
+
+<div class="text-center margin-05em"><img class="img-article" src="{% static 'trainer/images/game2_move1a_etalons.png' %}" /> <img class="img-article" src="{% static 'trainer/images/game2_move1_tolanes.png' %}" /></div>
+
+<p>In this example, the player going first can choose whether to leave an S or an O on the DW square. It is much better to leave on O -- the S gives the opponent many more chances to make an 8-letter word in reply, which would hit the TW square.</p>
+
+<p>Below is a table showing which letters are most often the first/list letter of an 8-letter word. In other words, think very carefully before sticking one of these top letters on the DW square during your first move.</p>
+
+<div class="table_addon">
+<table>
+<tr><th>Letter</th><th># of 8-letter words starting with this letter.</th><th># of 8-letter words ending with this letter</th></tr>
+<tr style="font-weight:bold;"><td>S</td><td>3,466</td><td>9,684</td></tr>
+<tr style="font-weight:bold;"><td>D</td><td>1,555</td><td>3,149</td></tr>
+<tr style="font-weight:bold;"><td>E</td><td>1,129</td><td>3,204</td></tr>
+<tr style="font-weight:bold;"><td>R</td><td>1,687</td><td>1,975</td></tr>
+<tr style="font-weight:bold;"><td>C</td><td>2,649</td><td>599</td></tr>
+<tr><td>T</td><td>1,526</td><td>1,722</td></tr>
+<tr><td>G</td><td>996</td><td>2,098</td></tr>
+<tr><td>P</td><td>2,180</td><td>121</td></tr>
+<tr><td>...</td><td>...</td><td>...</td></tr>
+<tr><td>Q</td><td>159</td><td>0</td></tr>
+<tr><td>Z</td><td>90</td><td>2</td></tr>
+<tr><td>X</td><td>20</td><td>62</td></tr>
+</table>
+</div>
+
+<p>Also, try to avoid putting a vowel in the square between the two DL squares. You could be setting your opponent up beautifully to play a J, Q, X, or Z. If you play <strong>PLEAD</strong>, for instance, to the right, and your opponent has a Z, you could be in trouble. They could play <strong>ZOO</strong> in one direction, and <strong>ZA</strong> in other, with the Z counting for 20 points in both words. Already, after a single turn, you're losing by 25 points or more.</p>
+
+<h3>Prudent Play -- Subsequent Turns</h3>
+<p>At the beginning of the game, you often have your best chance to make long words, including 7-letter bonus words. Frequently there will be 3-4 letters jutting out with several blank squares on either side. This gives you plenty of room to build, along with options on what letter from the board to incorporate.</p>
+
+<p>Playing long words into open space, however, has its drawback -- you are inviting your opponent to take advantage of the space you have opened up. Thus, you must get a good return for playing a long word. I would say 30 points at minimum, although 40 or more would be preferable. This is especially true if you are playing a longer word, but one that is less than seven letters.</p>
+
+<div class="text-center margin-05em"><img class="img-article" src="{% static 'trainer/images/position-example-overextension.png' %}" /></div>
+
+<p>In this example, it is a mistake to play the word <strong>POLLED</strong>, which will score only 16 points. The opponent will have ample opportunity to reply with something longer, and their score could easily approach 100 points if they can play something into the TW square with the right letters. If the player can't make a big score on this turn, they should at least attempt to limit their opponent's options.</p>
+
+<p>In order to risk this situation, you either need to hit some premium squares, like a DW or DW/TL combination, or make a 7-letter word. Otherwise, it is probably better to play a shorter word, while trying to maximize your chances of drawing good tiles.</p>
+
+
+<h3>Conclusion</h3>
+<p>Usually, by the fourth turn or so, you will need to be careful about opening premium squares no matter how the game is progressing. Eventually the scope of the board in play will approach one of the TW corners, and tactical considerations will play a heavier role.</p>
+
+<p>Hopefully, by the time this happens, you have managed to play 1-2 high-scoring words on the open board, and have built a small lead in the game. At the very least, you have hopefully not handed a huge score to your opponent that you must make up for.</p>
+
+<p>Next, we will examine the <a href="{% url 'trainer_article_space_and_position' %}">positional play</a> of the Words With Friends board more generally, with a focus on the placement of premium tiles and how to utilize them.</p> 
+
+<ul class="list-unstyled text-center">
+<li><a href="{% url 'trainer_article_overview' %}">Overview</a></li>
+<li><a href="{% url 'trainer_article_opening' %}">The Opening</a></li>
+<li><a href="{% url 'trainer_article_space_and_position' %}">Space and Position</a></li>
+<li><a href="{% url 'trainer_article_2_3_letter_words' %}">The Importance of 2 and 3 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_olaughlin_words' %}">Other Important Words, a Metric</a></li>
+<li><a href="{% url 'trainer_article_finding_words' %}">Finding Words -- Common Letter Groups</a></li>
+<li><a href="{% url 'trainer_article_drawing_7_letter_words' %}">Drawing for 7 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_jqxz' %}">Playing J, Q, X, and Z</a></li>
+<li><a href="{% url 'trainer_article_prefixes_suffixes' %}">Prefixes and Suffixes</a></li>
+<li><a href="{% url 'trainer_article_consonant_vowel_distribution' %}">Consonant and Vowel Distribution</a></li>
+<li><a href="{% url 'trainer_article_endgame' %}">The Endgame</a></li>
+<li><a href="{% url 'trainer_article_sample_game_1' %}">Sample Game 1</a></li>
+<li><a href="{% url 'trainer_article_sample_game_2' %}">Sample Game 2</a></li>
+<li><a href="{% url 'trainer_article_sample_game_3' %}">Sample Game 3</a></li>
+<li><a href="{% url 'trainer_article_sample_game_4' %}">Sample Game 4</a></li>
+<li><a href="{% url 'trainer_article_sample_game_5' %}">Sample Game 5</a></li>
+</ul>
+
+{% endblock %}

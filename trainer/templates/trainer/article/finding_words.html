@@ -1,0 +1,57 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row text-center"><h1>Strategy and Tips -- Finding Words with Common Letter Groups</h1></div>
+
+<div class="row padding-05em">
+<p>You can memorize the 2-letter words with reasonable effort. You can even learn most of the 3-letter words, and some of the necessary longer words (see <a href="{% url 'trainer_article_olaughlin_words' %}">O'Laughlin Words</a>). But at a certain point, you are simply not going to memorize every word in the dictionary, unless you are literally gunning for something like a U.S. championship in Scrabble&reg;.</p>
+
+<p>So, that being said, what is a good way to look for longer words that may be hiding on your rack? At first glance, something like <strong>GEILRSN</strong> might look like a mess. However, there are certain groupings of letters which show up over and over again in long words. Once you are aware of them, you can look for your best word in a much more organized fashion.</p>
+
+<h3>3-Letter Word Fragments</h3>
+<p>Let's focus on here on 3-letter fragments. Longer fragments than that do not occur commonly enough to be useful. Shorter fragments have the opposite problem. When looking at 3-letter fragments, there are certain combinations which appear in long words way more often than average.</p>
+
+<p>An obvious one is <strong>ING</strong>. As the present participle of a huge number of verbs, it shows up in numerous 7-letter words. <strong>BASKING</strong>, <strong>PLAYING</strong>, <strong>READING</strong>, <strong>DUELING</strong>, <strong>WORKING</strong>, etc. etc. etc. If you notice that you can make <strong>ING</strong> from your rack, you are off to a great start.</p>
+
+<p>Another common and useful fragment is <strong>ERS</strong>. Many plural nouns take this ending. <strong>WALKERS</strong>, <strong>PLAYERS</strong>, <strong>DANCERS</strong>, <strong>SINGERS</strong>, <strong>TOILERS</strong>, etc. etc. etc. If you can find <strong>ERS</strong> on your rack, then it is often a simple matter of finding a 4-letter verb with your other letters.</p>
+
+<p>So what are the most common 3-letter fragments. If you start with the top 20, you will already have the building blocks for thousands of 7 and 8-letter words. We have a longer list <a href="{% url 'trainer_n_letter_word_fragments' 3 %}">here</a>, but the short answer is also below:</p>
+
+<p class="text-center"><strong>ING</strong>, <strong>ERS</strong>, <strong>TER</strong>, <strong>IES</strong>, <strong>EST</strong>, <strong>ATE</strong>, <strong>IER</strong>, <strong>LES</strong>, <strong>LIN</strong>, <strong>INE</strong>, <strong>TED</strong>, <strong>RES</strong>, <strong>TIN</strong>, <strong>LED</strong>, <strong>VER</strong>, <strong>ESS</strong>, <strong>CHE</strong>, <strong>LER</strong>, <strong>RED</strong>, <strong>BLE</strong></p>
+
+<h3>An Example</h3>
+<p>So, going back to <strong>GEILRSN</strong>, which of these fragments can we find? And do they help us find 7-letter words?</p>
+
+<p>Of these top 20 fragments, we have <strong>ING</strong>, <strong>ERS</strong>, <strong>IES</strong>, <strong>LES</strong>, <strong>LIN</strong>, <strong>INE</strong>, <strong>RES</strong>, and <strong>LER</strong>. Without going into every one of them specifically, let's start with <strong>ING</strong>. That leaves with with ELRS in the rest of our rack. We might see a word like <strong>SINGER</strong> or <strong>RINGS</strong> almost immediately, but eventually, we would hopefully see <strong>LINGERS</strong>.</p>
+
+<p>This word actually uses multiple fragments from our list -- <strong>ING</strong> and <strong>ERS</strong>. Group these two together, and you would see L-ING-ERS. Or you could start with <strong>LIN</strong> and <strong>ERS</strong> and see LIN-G-ERS. This is just one example, but if you learn the list of important 3-letter fragments, you can hopefully improve your search process and find more of the long words which are essential to winning at Words With Friends&reg;.</p>
+
+<p>P.S., Bonus points if you also saw <strong>SLINGER</strong> in this set of letters.</p>
+
+<h3>Conclusion</h3>
+<p>By looking for the most fruitful letter combinations first, you can often find words that might have otherwise not revealed themselves. At the very least, you can make your search process more efficient.</p>
+
+<p>Continue to our next section to read about <a href="{% url 'trainer_article_finding_words' %}">7-letter words</a>, and how to maximize your chances of drawing one. Or click on any of our articles below.</p>
+
+<ul class="list-unstyled text-center">
+<li><a href="{% url 'trainer_article_overview' %}">Overview</a></li>
+<li><a href="{% url 'trainer_article_opening' %}">The Opening</a></li>
+<li><a href="{% url 'trainer_article_space_and_position' %}">Space and Position</a></li>
+<li><a href="{% url 'trainer_article_2_3_letter_words' %}">The Importance of 2 and 3 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_olaughlin_words' %}">Other Important Words, a Metric</a></li>
+<li><a href="{% url 'trainer_article_finding_words' %}">Finding Words -- Common Letter Groups</a></li>
+<li><a href="{% url 'trainer_article_drawing_7_letter_words' %}">Drawing for 7 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_jqxz' %}">Playing J, Q, X, and Z</a></li>
+<li><a href="{% url 'trainer_article_prefixes_suffixes' %}">Prefixes and Suffixes</a></li>
+<li><a href="{% url 'trainer_article_consonant_vowel_distribution' %}">Consonant and Vowel Distribution</a></li>
+<li><a href="{% url 'trainer_article_endgame' %}">The Endgame</a></li>
+<li><a href="{% url 'trainer_article_sample_game_1' %}">Sample Game 1</a></li>
+<li><a href="{% url 'trainer_article_sample_game_2' %}">Sample Game 2</a></li>
+<li><a href="{% url 'trainer_article_sample_game_3' %}">Sample Game 3</a></li>
+<li><a href="{% url 'trainer_article_sample_game_4' %}">Sample Game 4</a></li>
+<li><a href="{% url 'trainer_article_sample_game_5' %}">Sample Game 5</a></li>
+</ul>
+
+</div>
+
+{% endblock %}

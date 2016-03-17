@@ -1,0 +1,91 @@
+{% extends 'trainer/base.html' %}
+{% load i18n widget_tweaks %}
+
+{% block body %}
+<!-- Modal (see http://getbootstrap.com/javascript/#modals-examples) -->
+<div class="modal fade" id="showAllModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Are You Sure?</h4>
+      </div>
+      <div class="modal-body">
+      End this round and calculate your final score?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="final_score_button">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="row"><h1 class="text-center">Tools - O'Laughlin Words</h1></div>
+
+<div class="row">
+    <div class="col-sm-offset-2 col-sm-8" id="word_letter_intro">
+    <p><a href="{% url 'trainer_article_olaughlin_words' %}">O’Laughlin playability</a> is a metric designed to measure how unique a word is, compared to other words with similar letters. Below are the most important words for given word lengths. Can you memorize them all? The answers will disappear when you enter your first word.</p>
+    </div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-7 col-sm-offset-3" id="word_letter_destination">
+<input id="word_letter_submit_input" class="word_letter_large_font" type="text" maxlength="{{ letters_to_enter }}" placeholder="ENTER to submit"></input>
+</div>
+</div></br>
+
+<div class="row" id="word_letter_buttons_2">
+    <div class="col-sm-offset-5 col-xs-offset-1">
+    <button type="submit" id="word_letter_submit" class="btn btn-success">Submit Word</button>
+    <button type="submit" id="word_letter_finish" class="btn btn-warning" data-toggle="modal" data-target="#showAllModal">Show All</button>
+    </div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-10 col-sm-offset-1" id="word_match_area">
+<h3 class="text-center"><span id="word_letter_point_count">0</span> points</h3>
+<ul class="list-unstyled" id="word_matches_guessed_list">
+{% for word_match in word_matches %}
+<li><strong>{{ word_match.letter_count }} Letters: </strong><span class="word_match_by_letter" id="word_match_letter_{{ word_match.letter_count }}"> {% for word in word_match.words %}{{ word }}{% if not forloop.last %}, {% endif %}{% endfor %}</span></li>
+{% endfor %}
+</ul>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-10 col-sm-offset-1">
+<h3 class="text-center">Scoring System</h3>
+<ul class="list-unstyled">
+<li>Gain 3 points for any correct guess.</li>
+<li>Lose 1 point for an incorrect guess.</li>
+<li>Lose 1 point, at the end, for every word not guessed.</li>
+</ul>
+<p>We will calculate your final score, and % of possible points scored, when you click "Show All".</p>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-10 col-sm-offset-1">
+<p>NOTE: There are many hundreds of 7 and 8-letter tile combinations which can only make a single, long word. The ones presented in this tool contain the most commonly drawn letters from that set. For instance, you are much more likely to draw the tiles to make ERASION than a word like ZAMBUCK.</p>
+</div>
+</div>
+
+
+{% endblock %}
+
+{% block scripts %}
+{% load staticfiles %}
+<script type="text/javascript">
+findAllWords_temp = {};
+findAllWords_temp.word_matches = {% autoescape off %}{{ word_matches }}{% endautoescape %};
+findAllWords_temp.total_word_count = {{ total_word_count }};
+findAllWords_temp.total_point_count = 0;
+</script>
+<script src="{% static 'trainer/js/olaughlin_words.js' %}"></script>
+{% endblock %}

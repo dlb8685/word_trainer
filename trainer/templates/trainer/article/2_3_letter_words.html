@@ -1,0 +1,65 @@
+{% extends 'trainer/base.html' %}
+{% load staticfiles %}
+
+{% block body %}
+<div class="row text-center"><h1>Strategy and Tips -- 2 & 3 Letter Words</h1></div>
+<div class="row padding-05em">
+<p>Success in Words With Friends&reg; does not depend on knowing the same words that will help in a college English class. It is very uncommon for a word longer than eight letters to come up in the course of a game. On the other hand, many 2 and 3-letter words are rarely used in conversation, yet are essential to playing the board well in this game.</p>
+
+<p>You must memorize 2 and 3-letter words to become a truly solid player. There is no other way to put it. We have a full list of <a href="{% url 'trainer_n_letter_words' 2 %}">2-letter</a> and <a href="{% url 'trainer_n_letter_words' 3 %}">3-letter</a> words on our site, and they can be found many other places as well.</p>
+
+<p>Below are some specific cases where these words come into play.</p>
+
+<h3>Unusual Letters</h3>
+<p>It is particularly important to know the 2 letter words that go with unusual letters, like <strong>JO</strong>, <strong>KA</strong>, <strong>KI</strong>, <strong>QI</strong>, <strong>AX</strong>, <strong>EX</strong>, <strong>OX</strong>, and <strong>ZA</strong>. If you catch the right situation, you can make an enormous score by making, for example, <strong>JO</strong> in one direction and a long J word in the other direction. If the J were on a DL or TL square, you could easily approach 100 points with such a turn.</p>
+
+<div class="text-center margin-05em"><img src="{% static 'trainer/images/game1_move5a_gox.png' %}" /></div>
+
+<p>In this example, the player has played <strong>EX</strong> in one direction, and <strong>GOX</strong> in another. These are both short words, but because the X is on a double-letter space, the resulting score is quite strong -- almost 50 points.</p>
+
+<p>Additionally, to take advantage of this, the player had to know that <strong>AG</strong> and <strong>WO</strong> were valid.</p>
+
+
+<h3>Words in Parallel</h3>
+<p>Knowing 2 and 3-letter words well enables you to play in tight spaces and closed games. It enables you to play words in parallel and effectively double your scores or more.</p>
+
+<p>You also may have situations where you have a 7-letter word, or other high-scoring word on your rack, but need to find a place to play it on the board. It could be that your best option is to play 1-2 letters of your word in parallel to an existing word, to make some 2-letter words in addition to your main play.</p>
+
+<div class="text-center margin-05em"><img class="img-article" src="{% static 'trainer/images/game4_move8_unite.png' %}" /></div>
+
+<p>In this example, the player playing <strong>UNITE</strong> is able to build a good word, hitting the TW score, because they are also making a series of 2-letter words. By knowing <strong>NU</strong>, <strong>AN</strong>, <strong>TI</strong>, and <strong>ET</strong> are valid, it is possible to score nearly 50 points with a fairly common word.</p>
+
+<h3>C and V</h3>
+<p>It is also important to know that the letters C and V cannot be used to make a two-letter word. This becomes very relevant when playing a positional game, or attempting to block a certain part of the board. If you play a word like <strong>VEAL</strong> or <strong>VICTOR</strong>, such that the V juts into a part of the board you want to block, then it will be much harder for your opponent to place a high-scoring word.</p>
+
+<div class="text-center margin-05em"><img class="img-article" src="{% static 'trainer/images/game4_move9_clods.png' %}" /></div>
+
+<p>In this example, the C in <strong>CLODS</strong> will prevent the opponent from playing a word to the left, towards the TW score. The V in <strong>VIPER</strong> also helps to keep the action away from the top row. Both of these developments will favor the player who is winning, since they will make it harder for either player to make long words.</p>
+
+<h3>Conclusion</h3>
+<p>To enhance your success at Words With Friends&reg; and other word games, it is extremely important to focus your study on 2 and 3-letter words until you know them really well. Is it like learning how to tackle in football, or play a simple scale on a piano. If you struggle in this area, your overall game will be highly constrained.</p>
+
+<p>Continue onward to read about the <a href="{% url 'trainer_article_olaughlin_words' %}">most important words</a> to learn, and how to measure such a thing, as you build a vocabulary.</p>
+
+<ul class="list-unstyled text-center">
+<li><a href="{% url 'trainer_article_overview' %}">Overview</a></li>
+<li><a href="{% url 'trainer_article_opening' %}">The Opening</a></li>
+<li><a href="{% url 'trainer_article_space_and_position' %}">Space and Position</a></li>
+<li><a href="{% url 'trainer_article_2_3_letter_words' %}">The Importance of 2 and 3 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_olaughlin_words' %}">Other Important Words, a Metric</a></li>
+<li><a href="{% url 'trainer_article_finding_words' %}">Finding Words -- Common Letter Groups</a></li>
+<li><a href="{% url 'trainer_article_drawing_7_letter_words' %}">Drawing for 7 Letter Words</a></li>
+<li><a href="{% url 'trainer_article_jqxz' %}">Playing J, Q, X, and Z</a></li>
+<li><a href="{% url 'trainer_article_prefixes_suffixes' %}">Prefixes and Suffixes</a></li>
+<li><a href="{% url 'trainer_article_consonant_vowel_distribution' %}">Consonant and Vowel Distribution</a></li>
+<li><a href="{% url 'trainer_article_endgame' %}">The Endgame</a></li>
+<li><a href="{% url 'trainer_article_sample_game_1' %}">Sample Game 1</a></li>
+<li><a href="{% url 'trainer_article_sample_game_2' %}">Sample Game 2</a></li>
+<li><a href="{% url 'trainer_article_sample_game_3' %}">Sample Game 3</a></li>
+<li><a href="{% url 'trainer_article_sample_game_4' %}">Sample Game 4</a></li>
+<li><a href="{% url 'trainer_article_sample_game_5' %}">Sample Game 5</a></li>
+</ul>
+
+</div>
+
+{% endblock %}

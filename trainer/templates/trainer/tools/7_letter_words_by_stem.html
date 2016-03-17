@@ -1,0 +1,100 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<!-- Modal (see http://getbootstrap.com/javascript/#modals-examples) -->
+<div class="modal fade" id="showAllModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Are You Sure?</h4>
+      </div>
+      <div class="modal-body">
+      End this round and calculate your final score?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+        <button type="button" class="btn btn-success" data-dismiss="modal" id="final_score_button">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Content -->
+<div class="row"><h1 class="text-center">Tools - 7-Letter Words by Stem</h1></div>
+
+<div class="row">
+<div class="col-sm-offset-2 col-sm-8 text-center" id="word_letter_intro">
+<p>Given six letters (and a blank), make as many 7-letter words as you can. For example, given the letters AEINST_, you could make AUNTIES, NASTIER, SALTINE, and many other words. Recognizing good bases for 7-letter words is important to improving your game.</p>
+</div>
+</div>
+
+
+<div class="row">
+<div class="text-center">
+<p class="lead">In this round, find all 7-letter words which contain the letters <strong>{{ word_stem }}_</strong></p>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-7 col-sm-offset-3" id="word_letter_destination">
+<input id="word_letter_submit_input" class="word_letter_large_font" type="text" maxlength="{{ letters_to_enter }}" placeholder="ENTER to submit"></input>
+</div>
+</div></br>
+
+<div class="row">
+  <div class="col-sm-7 col-sm-offset-3" id="word_letter_source">
+    {% for letter in word_stem %}
+    <div class="force_pointer word_letter_frame" unselectable="on" >{{ letter }}</div>
+    {% endfor %}
+    <div class="force_pointer word_letter_frame" unselectable="on" >_</div>
+  </div>
+</div>
+
+
+<div class="row margin-top-1em" id="word_letter_buttons_2">
+    <div class="col-sm-offset-5 col-xs-offset-1">
+    <button type="submit" id="word_letter_submit" class="btn btn-success">Submit Word</button>
+    <button type="submit" id="word_letter_finish" class="btn btn-warning" data-toggle="modal" data-target="#showAllModal">Show All</button>
+    </div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-10 col-sm-offset-1" id="word_match_area">
+<h3 class="text-center"><span id="word_letter_point_count">0</span> points</h3>
+<ul class="list-unstyled" id="word_matches_guessed_list">
+<li><strong>Matching Words:</strong> <span class="word_match_by_letter" id="word_match_by_length_and_stem"></span></li>
+</ul>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-10 col-sm-offset-1">
+<h3 class="text-center">Scoring System</h3>
+<ul class="list-unstyled">
+<li>Gain 3 points for a correct guess.</li>
+<li>Lose 1 point for an incorrect guess.</li>
+<li>Lose 1 point, at the end, for every word not guessed.</li>
+</ul>
+<p>We will calculate your final score, and % of possible points scored, when you click "Show All".</p>
+</div>
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+{% load staticfiles %}
+<script src="{% static 'trainer/js/Sortable.min.js' %}"></script>
+<script type="text/javascript">
+sevenLetterWords_temp = {};
+sevenLetterWords_temp.word_stem = '{{ word_stem }}';
+sevenLetterWords_temp.word_matches = {% autoescape off %}{{ word_matches }}{% endautoescape %};
+sevenLetterWords_temp.total_word_count = {{ total_word_count }};
+sevenLetterWords_temp.total_point_count = 0;
+</script>
+<script src="{% static 'trainer/js/7_letter_words_by_stem.js' %}"></script>
+{% endblock %}

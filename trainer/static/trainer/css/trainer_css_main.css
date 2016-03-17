@@ -1,0 +1,165 @@
+.container_addon {
+    background-color: #ffffca;
+    border: solid;
+    border-color: #c9c9c9;
+    border-width: 1px;
+    }
+
+.top_menu_bar {
+    background-color: #ffffdf;
+    border-bottom: solid;
+    border-top: solid;
+    border-color: #c9c9c9;
+    border-width: 2px;
+}
+
+.header_link {
+    border-right: solid;
+    border-color: #c9c9c9;
+    color: #444444;
+    font-size: 1.5em;
+    margin-left: 0.5em;    
+    padding-right: 0.5em;
+}
+.header_link a {
+    color: #444444;
+}
+.header_link a:visited {
+    color: #444444;
+}
+
+.header_link_end {
+    color: #444444;
+    font-size: 1.5em;
+    margin-left: 0.5em;  
+}
+.header_link_end a {
+    color: #444444;
+}
+.header_link_end a:visited {
+    color: #444444;
+}
+
+
+
+.force_pointer {
+    cursor: default;
+    }
+    
+#word_letter_destination {
+    border: solid;
+    border-width: 2px;
+    height: 4.0em;
+    padding: 0.5em 0.5em 0.5em 1.0em;
+    }
+.word_letter_large_font {
+    font-size: 1.6em;
+}    
+    
+
+#word_letter_source {
+    height: 4.0em;
+    padding: 0.5em 0.5em 0.5em 1.0em;
+    }
+    
+.word_letter_frame {
+    background-color: #ffbb33;
+    border: solid;
+    border-width: 1px;
+    display: inline-block;
+    font-size: 1.75em;
+    font-weight: bold;
+    margin: 0 0.1em 0;
+    text-align: center;
+    width: 1.75em;
+    }
+.word_letter_frame_1 {
+    background-color: #ffbb33;
+    border: solid;
+    border-width: 1px;
+    display: inline-block;
+    font-size: 1.75em;
+    font-weight: bold;
+    margin: 0 0.15em 0;
+    text-align: center;
+    width: 1.75em;
+}
+.word_letter_frame_large {
+    background-color: #ffbb33;
+    border: solid;
+    border-width: 1px;
+    display: inline-block;
+    font-size: 2.0em;
+    font-weight: bold;
+    margin: 0 0.1em 0;
+    text-align: center;
+    width: 1.75em;
+    }
+.word_letter_frame_large_word_start {
+    margin-left: 1.5em;
+    }
+    
+#find_all_words_options .form-group {
+    margin-right: 0.5em;
+}
+#find_all_words_options .checkbox {
+    margin-right: 0.5em;
+    margin-left: 1.0em;
+}
+
+.word_match_by_letter {
+    margin-left: 0.5em;
+}
+
+.word_match_correct {
+    color: green;
+    font-weight: bold;
+}
+
+
+.margin-top-1em {
+    margin-top: 1.0em;
+}
+.margin-05em {
+    margin: 0.5em;
+}
+.padding-1em {
+    padding: 1.0em;
+}
+.padding-05em {
+    padding: 0 0.5em 0;
+}
+
+.word_match_missed {
+    color: red;
+    font-weight: bold;
+}
+
+
+.table_addon {
+    margin: 0.5em;
+}
+.table_addon table {
+    margin: 0 auto;
+}
+.table_addon th {
+    padding: 0 0.2em;
+    border: solid;
+    border-width: 1px;
+    text-align: center;
+    background-color: #ffffee;
+}
+.table_addon td {
+    padding: 0 0.2em;
+    border: solid;
+    border-width: 1px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.border-bottom {
+    border-bottom: dotted;
+    border-width: 2px;
+    border-color: #c9c9c9;
+    margin-bottom: 0.5em;
+}

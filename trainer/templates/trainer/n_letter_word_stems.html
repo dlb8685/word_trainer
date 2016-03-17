@@ -1,0 +1,21 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<h1>{{ n }}-Letter Word Stems</h1>
+
+<p>The word stems below are sets of {{ n }} letters which are likely to lead to a 7-letter word.</p>
+
+<p>For instance, the {{ n }}-letter groups most likely to lead to a 7-letter word are {{ word_stems.0.word_stem }}, followed by {{ word_stems.1.word_stem }} and {{ word_stems.2.word_stem }}.</p>
+
+<p>Understanding which letter groups are the most powerful can help <a href="{% url 'trainer_article_drawing_7_letter_words' %}">immensely</a> in many word games.</p>
+
+<p>Fortunately, <strong>The Word Trainer</strong> has a number of learning <a href="{% url 'trainer_tools_home' %}">tools</a> to facilitate this process.</p>
+
+{% for word_stem in word_stems %}
+<h3>{{ word_stem.word_stem }}</h3>
+{{ word_stem.word_count }} words: 
+    {% for word in word_stem.words %}
+    <a href="http://www.merriam-webster.com/dictionary/{{ word.word.lower }}">{{ word.word }}</a> {% if not forloop.last %}-{% elif word_stem.word_count > 10 %}...{% endif %} 
+    {% endfor %}
+{% endfor %}
+{% endblock %}

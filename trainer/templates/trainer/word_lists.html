@@ -1,0 +1,26 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row"><h1 class="text-center">Word Lists</h1></div>
+
+<div class="row padding-05em">
+<p>We have attempted to collect a number of important word lists on our site to help you improve your game. Below is a full list.</p>
+
+<ul>
+<li><strong><a href="{% url 'trainer_n_letter_words' 2 %}">Two Letter Words</a></strong>: A full list of 2-letter words.</li>
+<li><strong><a href="{% url 'trainer_n_letter_words' 3 %}">Three Letter Words</a></strong>: A full list of 3-letter words.</li>
+<li><strong><a href="{% url 'trainer_n_letter_words' 4 %}">Four Letter Words</a></strong>: A full list of 4-letter words.</li>
+<li><strong><a href="{% url 'trainer_n_letter_word_fragments' 3 %}">Three Letter Fragments</a></strong>: A list of three-letter groups which are often found in longer words.</li>
+<li><strong><a href="{% url 'trainer_n_letter_word_stems' 3 %}">Three Letter Word Stems</a></strong>: Which three letters are found in the highest number of 7-letter words?</li>
+<li><strong><a href="{% url 'trainer_n_letter_word_stems' 4 %}">Four Letter Word Stems</a></strong>: Which four letters are found in the highest number of 7-letter words?</li>
+<li><strong><a href="{% url 'trainer_n_letter_word_stems' 5 %}">Five Letter Word Stems</a></strong>: Which five letters are found in the highest number of 7-letter words?</li>
+<li><strong><a href="{% url 'trainer_n_letter_word_stems' 6 %}">Six Letter Word Stems</a></strong>: Which six letters are found in the highest number of 7-letter words?</li>
+<li><strong><a href="{% url 'trainer_olaughlin_words' %}">O'Laughlin Words</a></strong>: Important words that use unique letters / are often playable.</li>
+<li><strong><a href="{% url 'trainer_jqxz_words' %}">JQXZ Words</a></strong>: Words that use one of the four high-value JQXZ tiles.</li>
+<li><strong><a href="{% url 'trainer_q_without_u_words' %}">Q-without-U Words</a></strong>: Words with a Q that do not contain a U.</li>
+<li><strong><a href="{% url 'trainer_consonant_heavy_words' %}">Consonant-Heavy Words</a></strong>: Words that are mostly consonants.</li>
+<li><strong><a href="{% url 'trainer_vowel_heavy_words' %}">Vowel-Heavy Words</a></strong>: Words that are mostly vowels.</li>
+</ul>
+</div>
+
+{% endblock %}

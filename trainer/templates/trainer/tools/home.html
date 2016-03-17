@@ -1,0 +1,34 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<div class="row"><h1 class="text-center">Learning Tools</h1></div>
+
+<div class="row">
+<div class="col-sm-offset-1 col-sm-10 text-center" id="word_letter_intro">
+<p>Playing actual games is an essential part of becoming a good Words With Friends&reg; player. On top of that, however, we have a few training tools that should help with different aspects of your game. Our full list is below.</p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-offset-1 col-sm-10">
+<ul class="list-unstyled list-margin-05em">
+<li><span class="lead"><a href="{% url 'trainer_tools_find_all_words' %}"><strong>Find All Words</strong></a></span></br>Try to find every valid word from a set of 3-7 letters. See which words you missed at the end. You can decide how many letters to use, along with other options.</li>
+<li><span class="lead"><a href="{% url 'trainer_tools_is_this_a_word' %}"><strong>Is This a Word?</strong></a></span></br>Given a potential word, you must guess whether it is valid or not. This is a good way to expose yourself to many new words in a short period of time.</li>
+<li><span class="lead"><a href="{% url 'trainer_tools_words_by_length_and_stem' %}"><strong>Words by Length and Stem</strong></a></span></br>Given a word length and a specific stem, find as many valid words as you can. Examples are to find all 5-letter words that begin with CAR, or all 7-letter words that end with ERS.</li>
+<li><span class="lead"><a href="{% url 'trainer_tools_7_letter_words_by_stem' %}"><strong>7-Letter Words</strong></a></span></br>Knowing the best stems for 7-letter words is an important part of the game. In this tool, we provide you with six letters and one blank tile. Make as many 7-letter words as you can.</li>
+<li><span class="lead"><a href="{% url 'trainer_tools_vowel_heavy_words' %}"><strong>Vowel-Heavy Words</strong></a></span></br>Getting stuck with a rack full of vowels can kill your game. Use this tool to learn a number of vowel-heavy words, like ADIEU or EERIE, which can get you out of a jam.</li>
+<li><span class="lead"><a href="{% url 'trainer_tools_2_letter_words' %}"><strong>2-Letter Words</strong></a></span></br>It's not practical for most people to memorize a significant part of the Words With Friends&reg; dictionary. However, learning the valid 2-letter words is essential. This tool helps with that process.</li>
+<li><span class="lead"><a href="{% url 'trainer_tools_olaughlin_words' %}"><strong>O'Laughlin Words</strong></a></span></br>O'Laughlin playability measures how distinct a word is from words with similar letters. It is very helpful to memorize words (such as QAT, FAQIR, ZOUAVE...) that have a high score in this regard.</li>
+</ul>
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-sm-offset-1 col-sm-10 text-center">
+<p>Besides the tools available on our site, there are numerous <a href="{% url 'trainer_external_resources' %}">external resources</a>, many of them free, which can help you improve at games like Words With Friends&reg; and Scrabble&reg;.</p>
+</div>
+</div>
+
+
+{% endblock %}

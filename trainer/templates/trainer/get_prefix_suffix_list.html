@@ -1,0 +1,30 @@
+{% extends 'trainer/base.html' %}
+
+{% block body %}
+<h1>Get Prefixes and Suffixes</h1>
+
+<h2>Search</h2>
+<form action="{% url 'trainer_get_prefix_suffix_list' %}" method="get">
+{{ search_input_form }}
+<input type="submit" value="Submit Word!" />
+</form>
+
+{% if word %}
+<h2>You searched for: {{ search_input }}</h2>
+    {% if word_prefix_suffix_list %}
+        <ul>
+        {% if word_prefix_suffix_list.prefix_list %}
+        <li>Prefixes: {% for letter in word_prefix_suffix_list.prefix_list %}<strong>{{ letter }}</strong>{% if not forloop.last %},{% endif %}{% endfor %}</li>
+        {% endif %}
+        {% if word_prefix_suffix_list.suffix_list %}
+        <li>Suffixes: {% for letter in word_prefix_suffix_list.suffix_list %}<strong>{{ letter }}</strong>{% if not forloop.last %},{% endif %}{% endfor %}</li>
+        {% endif %}
+        </ul>
+    {% else %}
+    <p>There are no one-letter prefixes or suffixes for the word that you entered.</p>
+    {% endif %}
+{% elif search_input %}
+<p>You did not input a valid word, according to our dictionary.</p>
+{% endif %}
+
+{% endblock %}
