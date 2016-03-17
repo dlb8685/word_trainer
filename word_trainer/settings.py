@@ -143,6 +143,8 @@ if 'HEROKU_PRODUCTION_ENVIRONMENT_TRUE' in os.environ:
     
     DEBUG = False
     TEMPLATES[0]['OPTIONS']['debug'] = False  # Django 1.8
+    
+    SECRET_KEY = os.environ['SECRET_KEY']
 
     # Allow all host headers
     ALLOWED_HOSTS = ['*']
